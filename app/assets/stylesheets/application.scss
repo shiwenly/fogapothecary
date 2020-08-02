@@ -23,3 +23,9 @@
     display: none;
   }
 }
+
+.picture-mobile {
+   @media only screen and (max-width: 576px) {
+     height: 30vh !important;
+  }
+}
