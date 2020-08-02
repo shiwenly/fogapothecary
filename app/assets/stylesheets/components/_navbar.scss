@@ -11,6 +11,10 @@
   width: 40px;
 }
 
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+
 .navbar {
  @media only screen and (min-width: 992px) {
      display: block;
@@ -23,9 +27,9 @@
   }
 }
 
-.navbar-brand {
+.navbar-title {
   @media only screen and (min-width: 992px) {
-    font-size: 28px;
+    font-size: 32px;
   }
    @media only screen and (max-width: 576px) {
     font-size: 20px;
