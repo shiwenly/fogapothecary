@@ -3,6 +3,10 @@ class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @products = Product.all
+  end
+
   def show
   end
 
@@ -15,7 +19,7 @@ class ProductsController < ApplicationController
     @product.user_id = current_user.id
     @product.statut = "active"
     if @product.save
-      redirect_to product_path(@product)
+      redirect_to products_path
     else
       render :new
     end
@@ -43,16 +47,14 @@ class ProductsController < ApplicationController
   def product_params
     params.require(:product).permit(
       :name,
+      :title,
       :description,
-      :benefit1,
-      :benefit2,
-      :benefit3,
-      :benefit4,
-      :price_small,
-      :price_large,
+      :title1,
+      :description1,
+      :title2,
+      :description2,
+      :price,
       :picture1,
-      :picture2,
-      :picture3,
       :category_product,
       :statut
     )

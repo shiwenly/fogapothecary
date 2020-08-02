@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_01_195428) do
+ActiveRecord::Schema.define(version: 2020_08_02_204607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,20 +39,18 @@ ActiveRecord::Schema.define(version: 2020_08_01_195428) do
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.string "benefit1"
-    t.string "benefit2"
-    t.string "benefit3"
-    t.string "benefit4"
-    t.integer "price_small"
-    t.integer "price_large"
-    t.string "picture1", default: "https://images.unsplash.com/photo-1496262967815-132206202600?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1590&q=80"
-    t.string "picture2", default: "https://images.unsplash.com/photo-1496262967815-132206202600?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1590&q=80"
-    t.string "picture3", default: "https://images.unsplash.com/photo-1496262967815-132206202600?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1590&q=80"
+    t.string "picture1", default: "image/upload/v1596359762/default_annonce_p5mk7k.png"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "statut"
     t.string "category_product"
+    t.string "title"
+    t.string "title1"
+    t.text "description1"
+    t.string "title2"
+    t.text "description2"
+    t.text "price"
     t.index ["user_id"], name: "index_products_on_user_id"
   end
 
