@@ -10,3 +10,25 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar {
+ @media only screen and (min-width: 992px) {
+     display: block;
+  }
+}
+
+.mr-auto {
+ @media only screen and (min-width: 992px) {
+    margin-right: 0px !important;
+  }
+}
+
+.navbar-brand {
+  @media only screen and (min-width: 992px) {
+    font-size: 28px;
+  }
+   @media only screen and (max-width: 576px) {
+    font-size: 20px;
+   }
+}
+
