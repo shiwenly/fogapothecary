@@ -1,6 +1,6 @@
 <!-- Laptop version -->
-<div class="hide-on-small" style="height: 900px; background-size: cover; background-position: center; background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(https://res.cloudinary.com/fogapothecary/image/upload/v1596459675/spray_series_s0seu8.jpg">
-  <div class="container d-flex align-items-center justify-content-center" style="height: 580px">
+<div class="hide-on-small" style="height: 520px; background-size: cover; background-position: center; background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(https://res.cloudinary.com/fogapothecary/image/upload/v1596459675/spray_series_s0seu8.jpg">
+  <div class="container d-flex align-items-center justify-content-center" style="height: 520px">
     <h1 style="color: white; font-family: Garamond; font-size: ; letter-spacing: 1px; text-align: center"></h1>
   </div>
 </div>
@@ -23,109 +23,964 @@
   </div>
 </div>
 <!-- For Each  -->
-<% @products.each do |product| %>
-  <!-- Laptop version -->
-  <div class="container hide-on-small my-5 py-5">
-    <div class="row">
-      <div class="col-12 col-md-6">
-        <div class=" my-4">
-          <% if product.picture1.attached? %>
-            <%= cl_image_tag product.picture1.key, class: "", style: "height:700px; object-position: center center; object-fit: cover; width: 100%; border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
-          <% else %>
-            <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:700px; object-position: center center; object-fit: cover; width: 100%;     border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
-          <% end %>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 d-flex align-items-center p-5">
-        <div>
-          <h5 class="mb-5"><%= product.name %></h5>
-          <!-- Descsription 1 -->
-          <div class="mb-3">
-            <% if product.title !="" %>
-              <p><strong><%= product.title%></strong></p>
-            <% end %>
-            <% if product.description !="" %>
-              <p><%= simple_format(product.description) %></p>
-            <% end %>
-          </div>
-          <!-- Descsription 2 -->
-          <div class="mb-3">
-            <% if product.title1 !="" %>
-              <p><strong><%= product.title1 %></strong></p>
-            <% end %>
-            <% if product.description1 !="" %>
-              <p><%= simple_format(product.description1) %></p>
-            <% end %>
-          </div>
-          <!-- Descsription 3 -->
-          <div class="mb-3">
-            <% if product.title2 !="" %>
-              <p><strong><%= product.title2 %></strong></p>
-            <% end %>
-            <% if product.description2 !="" %>
-              <p><%= simple_format(product.description2) %></p>
-            <% end %>
-          </div>
-          <!-- Price -->
-          <div class="mb-3">
-            <% if product.price != "" %>
-              <p><%= simple_format(product.price) %></p>
-            <% end %>
-          </div>
-          <%= link_to "SHOP VIA TOKOPEDIA", "", class:"btn btn-square-black" %>
-          <%= link_to "SHOP VIA SHOPEE", "", class:"btn btn-square-black" %>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Mobile version -->
-  <div class="container hide-on-large my-5 py-5">
-    <div class="align-items-center">
-      <h5 class="mb-5"><%= product.name %></h5>
-      <div class="my-4">
-        <% if product.picture1.attached?%>
-          <%= cl_image_tag product.picture1.key, class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
-        <% else %>
-          <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
-        <% end %>
-      </div>
+<div class="profile-friends">
+  <div class="row search navigations mb-0 mt-5 pt-5">
+    <div class="col-8 offset-1 d-flex">
       <div>
-        <!-- Descsription 1 -->
-        <div class="mb-3">
-          <% if product.title !="" %>
-            <p><strong><%= product.title%></strong></p>
-          <% end %>
-          <% if product.description !="" %>
-            <p><%= simple_format(product.description) %></p>
-          <% end %>
-        </div>
-        <!-- Descsription 2 -->
-        <div class="mb-3">
-          <% if product.title1 !="" %>
-            <p><strong><%= product.title1 %></strong></p>
-          <% end %>
-          <% if product.description1 !="" %>
-            <p><%= simple_format(product.description1) %></p>
-          <% end %>
-        </div>
-        <!-- Descsription 3 -->
-        <div class="mb-3">
-          <% if product.title2 !="" %>
-            <p><strong><%= product.title2 %></strong></p>
-          <% end %>
-          <% if product.description2 !="" %>
-            <p><%= simple_format(product.description2) %></p>
-          <% end %>
-        </div>
-        <!-- Price -->
-        <div class="mb-3">
-          <% if product.price != "" %>
-            <p><%= simple_format(product.price) %></p>
-          <% end %>
-        </div>
-        <%= link_to "SHOP VIA TOKOPEDIA", "", class:"btn btn-square-black" %>
-        <%= link_to "SHOP VIA SHOPEE", "", class:"btn btn-square-black" %>
+        <h3 class="" style="font-size: 15px">FILTER BY</h3>
+      </div>
+      <div class="ml-5" style="font-size: 15px">
+        <h3 id="all" class="active" style="font-size: 16px">All products</h3>
+        <h3 id="spray" style="font-size: 16px">Spray</h3>
+        <h3 id="mist" style="font-size: 16px">Mist</h3>
+        <h3 id="candle" style="font-size: 16px">Candle</h3>
       </div>
     </div>
   </div>
-<% end %>
+  <div id="friends-toPlace" class="">
+    <% counter = 1 %>
+    <% @products.each do |product| %>
+      <% counter +=1 %>
+      <% if counter % 2 == 0 %>
+        <!-- Laptop version -->
+        <div class="container hide-on-small mb-5 py-5">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class=" my-4">
+                <% if product.picture1.attached? %>
+                  <% if product.category_product == "Candle" %>
+                    <%= cl_image_tag product.picture1.key, class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 436px; border-radius: 360px"%>
+                  <% else %>
+                    <%= cl_image_tag product.picture1.key, class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 436px; border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+                  <% end %>
+                <% else %>
+                  <% if product.category_product == "Candle" %>
+                    <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 100%; border-radius: 360px"%>
+                  <% else %>
+                    <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 100%;     border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 d-flex align-items-center p-5">
+              <div>
+                <h5 class="mb-5"><%= product.name %></h5>
+                <!-- Descsription 1 -->
+                <div class="mb-3">
+                  <% if product.title !="" %>
+                    <p><strong><%= product.title%></strong></p>
+                  <% end %>
+                  <% if product.description !="" %>
+                    <p><%= simple_format(product.description) %></p>
+                  <% end %>
+                </div>
+                <!-- Descsription 2 -->
+                <div class="mb-3">
+                  <% if product.title1 !="" %>
+                    <p><strong><%= product.title1 %></strong></p>
+                  <% end %>
+                  <% if product.description1 !="" %>
+                    <p><%= simple_format(product.description1) %></p>
+                  <% end %>
+                </div>
+                <!-- Descsription 3 -->
+                <div class="mb-3">
+                  <% if product.title2 !="" %>
+                    <p><strong><%= product.title2 %></strong></p>
+                  <% end %>
+                  <% if product.description2 !="" %>
+                    <p><%= simple_format(product.description2) %></p>
+                  <% end %>
+                </div>
+                <!-- Price -->
+                <div class="mb-3">
+                  <% if product.price != "" %>
+                    <p><%= simple_format(product.price) %></p>
+                  <% end %>
+                </div>
+                <%= link_to "SHOP VIA TOKOPEDIA", "", class:"btn btn-square-black" %>
+                <%= link_to "SHOP VIA SHOPEE", "", class:"btn btn-square-black" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% else %>
+        <div class="container hide-on-small my-5 py-5">
+          <div class="row">
+            <div class="col-12 col-md-6 d-flex align-items-center p-5">
+              <div>
+                <h5 class="mb-5"><%= product.name %></h5>
+                <!-- Descsription 1 -->
+                <div class="mb-3">
+                  <% if product.title !="" %>
+                    <p><strong><%= product.title%></strong></p>
+                  <% end %>
+                  <% if product.description !="" %>
+                    <p><%= simple_format(product.description) %></p>
+                  <% end %>
+                </div>
+                <!-- Descsription 2 -->
+                <div class="mb-3">
+                  <% if product.title1 !="" %>
+                    <p><strong><%= product.title1 %></strong></p>
+                  <% end %>
+                  <% if product.description1 !="" %>
+                    <p><%= simple_format(product.description1) %></p>
+                  <% end %>
+                </div>
+                <!-- Descsription 3 -->
+                <div class="mb-3">
+                  <% if product.title2 !="" %>
+                    <p><strong><%= product.title2 %></strong></p>
+                  <% end %>
+                  <% if product.description2 !="" %>
+                    <p><%= simple_format(product.description2) %></p>
+                  <% end %>
+                </div>
+                <!-- Price -->
+                <div class="mb-3">
+                  <% if product.price != "" %>
+                    <p><%= simple_format(product.price) %></p>
+                  <% end %>
+                </div>
+                <%= link_to "SHOP VIA TOKOPEDIA", "", class:"btn btn-square-black" %>
+                <%= link_to "SHOP VIA SHOPEE", "", class:"btn btn-square-black" %>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class=" my-4">
+                <% if product.picture1.attached? %>
+                  <% if product.category_product == "Candle" %>
+                    <%= cl_image_tag product.picture1.key, class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 436px; border-radius: 360px"%>
+                  <% else %>
+                    <%= cl_image_tag product.picture1.key, class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 436px; border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+                  <% end %>
+                <% else %>
+                  <% if product.category_product == "Candle" %>
+                    <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 100%; border-radius: 360px"%>
+                  <% else %>
+                    <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 100%;     border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <!-- Mobile version -->
+      <div class="container hide-on-large my-5 py-5" style="margin-right: 0 !important; margin-left: 0 !important">
+        <div class="align-items-center">
+          <h5 class="mb-4"><%= product.name %></h5>
+          <div class="my-4">
+            <% if product.picture1.attached?%>
+              <%= cl_image_tag product.picture1.key, class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
+            <% else %>
+              <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
+            <% end %>
+          </div>
+          <div>
+            <!-- Descsription 1 -->
+            <div class="mb-3">
+              <% if product.title !="" %>
+                <p><strong><%= product.title%></strong></p>
+              <% end %>
+              <% if product.description !="" %>
+                <p><%= simple_format(product.description) %></p>
+              <% end %>
+            </div>
+            <!-- Descsription 2 -->
+            <div class="mb-3">
+              <% if product.title1 !="" %>
+                <p><strong><%= product.title1 %></strong></p>
+              <% end %>
+              <% if product.description1 !="" %>
+                <p><%= simple_format(product.description1) %></p>
+              <% end %>
+            </div>
+            <!-- Descsription 3 -->
+            <div class="mb-3">
+              <% if product.title2 !="" %>
+                <p><strong><%= product.title2 %></strong></p>
+              <% end %>
+              <% if product.description2 !="" %>
+                <p><%= simple_format(product.description2) %></p>
+              <% end %>
+            </div>
+            <!-- Price -->
+            <div class="mb-3">
+              <% if product.price != "" %>
+                <p><%= simple_format(product.price) %></p>
+              <% end %>
+            </div>
+            <%= link_to "SHOP VIA TOKOPEDIA", "", class:"btn btn-square-black" %>
+            <%= link_to "SHOP VIA SHOPEE", "", class:"btn btn-square-black" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<script>
+  const addClassSelected = (target) => {
+  // take parent class -> get children -> remove classes for all children
+  // console.log(target)
+  const children = target.parentElement.children;
+  const childAmount = target.parentElement.childElementCount;
+  for (let i=0; i<childAmount; i++) {
+    children[i].classList.remove("active");
+  }
+  // add class
+  target.classList.add("active");
+  };
+  
+   this.addEventListener("click", (e) => {
+    console.log(e)
+    const whereToShow = document.querySelector("#friends-toPlace");
+    const id = e.target.id;
+    console.log(id)
+    if (id === "all") {
+      addClassSelected(e.target);
+      whereToShow.innerHTML = "";
+      whereToShow.insertAdjacentHTML("beforeend", `
+        <% counter = 1 %>
+        <% @products.each do |product| %>
+          <% counter +=1 %>
+          <% if counter % 2 == 0 %>
+            <!-- Laptop version -->
+            <div class="container hide-on-small mb-5 py-5">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class=" my-4">
+                    <% if product.picture1.attached? %>
+                      <% if product.category_product == "Candle" %>
+                        <%= cl_image_tag product.picture1.key, class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 436px; border-radius: 360px"%>
+                      <% else %>
+                        <%= cl_image_tag product.picture1.key, class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 436px; border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+                      <% end %>
+                    <% else %>
+                      <% if product.category_product == "Candle" %>
+                        <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 100%; border-radius: 360px"%>
+                      <% else %>
+                        <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 100%;     border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+                      <% end %>
+                    <% end %>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center p-5">
+                  <div>
+                    <h5 class="mb-5"><%= product.name %></h5>
+                    <!-- Descsription 1 -->
+                    <div class="mb-3">
+                      <% if product.title !="" %>
+                        <p><strong><%= product.title%></strong></p>
+                      <% end %>
+                      <% if product.description !="" %>
+                        <p><%= simple_format(product.description) %></p>
+                      <% end %>
+                    </div>
+                    <!-- Descsription 2 -->
+                    <div class="mb-3">
+                      <% if product.title1 !="" %>
+                        <p><strong><%= product.title1 %></strong></p>
+                      <% end %>
+                      <% if product.description1 !="" %>
+                        <p><%= simple_format(product.description1) %></p>
+                      <% end %>
+                    </div>
+                    <!-- Descsription 3 -->
+                    <div class="mb-3">
+                      <% if product.title2 !="" %>
+                        <p><strong><%= product.title2 %></strong></p>
+                      <% end %>
+                      <% if product.description2 !="" %>
+                        <p><%= simple_format(product.description2) %></p>
+                      <% end %>
+                    </div>
+                    <!-- Price -->
+                    <div class="mb-3">
+                      <% if product.price != "" %>
+                        <p><%= simple_format(product.price) %></p>
+                      <% end %>
+                    </div>
+                    <%= link_to "SHOP VIA TOKOPEDIA", "", class:"btn btn-square-black" %>
+                    <%= link_to "SHOP VIA SHOPEE", "", class:"btn btn-square-black" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% else %>
+            <div class="container hide-on-small mb-5 py-5">
+              <div class="row">
+                <div class="col-12 col-md-6 d-flex align-items-center p-5">
+                  <div>
+                    <h5 class="mb-5"><%= product.name %></h5>
+                    <!-- Descsription 1 -->
+                    <div class="mb-3">
+                      <% if product.title !="" %>
+                        <p><strong><%= product.title%></strong></p>
+                      <% end %>
+                      <% if product.description !="" %>
+                        <p><%= simple_format(product.description) %></p>
+                      <% end %>
+                    </div>
+                    <!-- Descsription 2 -->
+                    <div class="mb-3">
+                      <% if product.title1 !="" %>
+                        <p><strong><%= product.title1 %></strong></p>
+                      <% end %>
+                      <% if product.description1 !="" %>
+                        <p><%= simple_format(product.description1) %></p>
+                      <% end %>
+                    </div>
+                    <!-- Descsription 3 -->
+                    <div class="mb-3">
+                      <% if product.title2 !="" %>
+                        <p><strong><%= product.title2 %></strong></p>
+                      <% end %>
+                      <% if product.description2 !="" %>
+                        <p><%= simple_format(product.description2) %></p>
+                      <% end %>
+                    </div>
+                    <!-- Price -->
+                    <div class="mb-3">
+                      <% if product.price != "" %>
+                        <p><%= simple_format(product.price) %></p>
+                      <% end %>
+                    </div>
+                    <%= link_to "SHOP VIA TOKOPEDIA", "", class:"btn btn-square-black" %>
+                    <%= link_to "SHOP VIA SHOPEE", "", class:"btn btn-square-black" %>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class=" my-4">
+                    <% if product.picture1.attached? %>
+                      <% if product.category_product == "Candle" %>
+                        <%= cl_image_tag product.picture1.key, class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 436px; border-radius: 360px"%>
+                      <% else %>
+                        <%= cl_image_tag product.picture1.key, class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 436px; border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+                      <% end %>
+                    <% else %>
+                      <% if product.category_product == "Candle" %>
+                        <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 100%; border-radius: 360px"%>
+                      <% else %>
+                        <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 100%;     border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+                      <% end %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+          <!-- Mobile version -->
+          <div class="container hide-on-large my-5 py-5" style="margin-right: 0 !important; margin-left: 0 !important">
+            <div class="align-items-center">
+              <h5 class="mb-4"><%= product.name %></h5>
+              <div class="my-4">
+                <% if product.picture1.attached?%>
+                  <%= cl_image_tag product.picture1.key, class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
+                <% else %>
+                  <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
+                <% end %>
+              </div>
+              <div>
+                <!-- Descsription 1 -->
+                <div class="mb-3">
+                  <% if product.title !="" %>
+                    <p><strong><%= product.title%></strong></p>
+                  <% end %>
+                  <% if product.description !="" %>
+                    <p><%= simple_format(product.description) %></p>
+                  <% end %>
+                </div>
+                <!-- Descsription 2 -->
+                <div class="mb-3">
+                  <% if product.title1 !="" %>
+                    <p><strong><%= product.title1 %></strong></p>
+                  <% end %>
+                  <% if product.description1 !="" %>
+                    <p><%= simple_format(product.description1) %></p>
+                  <% end %>
+                </div>
+                <!-- Descsription 3 -->
+                <div class="mb-3">
+                  <% if product.title2 !="" %>
+                    <p><strong><%= product.title2 %></strong></p>
+                  <% end %>
+                  <% if product.description2 !="" %>
+                    <p><%= simple_format(product.description2) %></p>
+                  <% end %>
+                </div>
+                <!-- Price -->
+                <div class="mb-3">
+                  <% if product.price != "" %>
+                    <p><%= simple_format(product.price) %></p>
+                  <% end %>
+                </div>
+                <%= link_to "SHOP VIA TOKOPEDIA", "", class:"btn btn-square-black" %>
+                <%= link_to "SHOP VIA SHOPEE", "", class:"btn btn-square-black" %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      `);
+    }
+    else if (id === "spray") {
+      addClassSelected(e.target);
+      whereToShow.innerHTML = "";
+      whereToShow.insertAdjacentHTML("beforeend", `
+        <% counter = 1 %>
+            <% @product_spray.each do |product| %>
+              <% counter +=1 %>
+              <% if counter % 2 == 0 %>
+                <!-- Laptop version -->
+                <div class="container hide-on-small mb-5 py-5">
+                  <div class="row">
+                    <div class="col-12 col-md-6">
+                      <div class=" my-4">
+                        <% if product.picture1.attached? %>
+                          <% if product.category_product == "Candle" %>
+                            <%= cl_image_tag product.picture1.key, class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 436px; border-radius: 360px"%>
+                          <% else %>
+                            <%= cl_image_tag product.picture1.key, class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 436px; border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+                          <% end %>
+                        <% else %>
+                          <% if product.category_product == "Candle" %>
+                            <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 100%; border-radius: 360px"%>
+                          <% else %>
+                            <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 100%;     border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+                          <% end %>
+                        <% end %>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex align-items-center p-5">
+                      <div>
+                        <h5 class="mb-5"><%= product.name %></h5>
+                        <!-- Descsription 1 -->
+                        <div class="mb-3">
+                          <% if product.title !="" %>
+                            <p><strong><%= product.title%></strong></p>
+                          <% end %>
+                          <% if product.description !="" %>
+                            <p><%= simple_format(product.description) %></p>
+                          <% end %>
+                        </div>
+                        <!-- Descsription 2 -->
+                        <div class="mb-3">
+                          <% if product.title1 !="" %>
+                            <p><strong><%= product.title1 %></strong></p>
+                          <% end %>
+                          <% if product.description1 !="" %>
+                            <p><%= simple_format(product.description1) %></p>
+                          <% end %>
+                        </div>
+                        <!-- Descsription 3 -->
+                        <div class="mb-3">
+                          <% if product.title2 !="" %>
+                            <p><strong><%= product.title2 %></strong></p>
+                          <% end %>
+                          <% if product.description2 !="" %>
+                            <p><%= simple_format(product.description2) %></p>
+                          <% end %>
+                        </div>
+                        <!-- Price -->
+                        <div class="mb-3">
+                          <% if product.price != "" %>
+                            <p><%= simple_format(product.price) %></p>
+                          <% end %>
+                        </div>
+                        <%= link_to "SHOP VIA TOKOPEDIA", "", class:"btn btn-square-black" %>
+                        <%= link_to "SHOP VIA SHOPEE", "", class:"btn btn-square-black" %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <% else %>
+                <div class="container hide-on-small my-5 py-5">
+                  <div class="row">
+                    <div class="col-12 col-md-6 d-flex align-items-center p-5">
+                      <div>
+                        <h5 class="mb-5"><%= product.name %></h5>
+                        <!-- Descsription 1 -->
+                        <div class="mb-3">
+                          <% if product.title !="" %>
+                            <p><strong><%= product.title%></strong></p>
+                          <% end %>
+                          <% if product.description !="" %>
+                            <p><%= simple_format(product.description) %></p>
+                          <% end %>
+                        </div>
+                        <!-- Descsription 2 -->
+                        <div class="mb-3">
+                          <% if product.title1 !="" %>
+                            <p><strong><%= product.title1 %></strong></p>
+                          <% end %>
+                          <% if product.description1 !="" %>
+                            <p><%= simple_format(product.description1) %></p>
+                          <% end %>
+                        </div>
+                        <!-- Descsription 3 -->
+                        <div class="mb-3">
+                          <% if product.title2 !="" %>
+                            <p><strong><%= product.title2 %></strong></p>
+                          <% end %>
+                          <% if product.description2 !="" %>
+                            <p><%= simple_format(product.description2) %></p>
+                          <% end %>
+                        </div>
+                        <!-- Price -->
+                        <div class="mb-3">
+                          <% if product.price != "" %>
+                            <p><%= simple_format(product.price) %></p>
+                          <% end %>
+                        </div>
+                        <%= link_to "SHOP VIA TOKOPEDIA", "", class:"btn btn-square-black" %>
+                        <%= link_to "SHOP VIA SHOPEE", "", class:"btn btn-square-black" %>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class=" my-4">
+                        <% if product.picture1.attached? %>
+                          <% if product.category_product == "Candle" %>
+                            <%= cl_image_tag product.picture1.key, class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 436px; border-radius: 360px"%>
+                          <% else %>
+                            <%= cl_image_tag product.picture1.key, class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 436px; border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+                          <% end %>
+                        <% else %>
+                          <% if product.category_product == "Candle" %>
+                            <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 100%; border-radius: 360px"%>
+                          <% else %>
+                            <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 100%;     border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+                          <% end %>
+                        <% end %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+              <!-- Mobile version -->
+              <div class="container hide-on-large my-5 py-5" style="margin-right: 0 !important; margin-left: 0 !important">
+                <div class="align-items-center">
+                  <h5 class="mb-4"><%= product.name %></h5>
+                  <div class="my-4">
+                    <% if product.picture1.attached?%>
+                      <%= cl_image_tag product.picture1.key, class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
+                    <% else %>
+                      <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
+                    <% end %>
+                  </div>
+                  <div>
+                    <!-- Descsription 1 -->
+                    <div class="mb-3">
+                      <% if product.title !="" %>
+                        <p><strong><%= product.title%></strong></p>
+                      <% end %>
+                      <% if product.description !="" %>
+                        <p><%= simple_format(product.description) %></p>
+                      <% end %>
+                    </div>
+                    <!-- Descsription 2 -->
+                    <div class="mb-3">
+                      <% if product.title1 !="" %>
+                        <p><strong><%= product.title1 %></strong></p>
+                      <% end %>
+                      <% if product.description1 !="" %>
+                        <p><%= simple_format(product.description1) %></p>
+                      <% end %>
+                    </div>
+                    <!-- Descsription 3 -->
+                    <div class="mb-3">
+                      <% if product.title2 !="" %>
+                        <p><strong><%= product.title2 %></strong></p>
+                      <% end %>
+                      <% if product.description2 !="" %>
+                        <p><%= simple_format(product.description2) %></p>
+                      <% end %>
+                    </div>
+                    <!-- Price -->
+                    <div class="mb-3">
+                      <% if product.price != "" %>
+                        <p><%= simple_format(product.price) %></p>
+                      <% end %>
+                    </div>
+                    <%= link_to "SHOP VIA TOKOPEDIA", "", class:"btn btn-square-black" %>
+                    <%= link_to "SHOP VIA SHOPEE", "", class:"btn btn-square-black" %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+      `);
+    }
+    else if (id === "mist") {
+      addClassSelected(e.target);
+      whereToShow.innerHTML = "";
+      whereToShow.insertAdjacentHTML("beforeend", `
+        <% counter = 1 %>
+        <% @product_mist.each do |product| %>
+          <% counter +=1 %>
+          <% if counter % 2 == 0 %>
+            <!-- Laptop version -->
+            <div class="container hide-on-small my-5 py-5">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class=" my-4">
+                    <% if product.picture1.attached? %>
+                      <% if product.category_product == "Candle" %>
+                        <%= cl_image_tag product.picture1.key, class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 436px; border-radius: 360px"%>
+                      <% else %>
+                        <%= cl_image_tag product.picture1.key, class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 436px; border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+                      <% end %>
+                    <% else %>
+                      <% if product.category_product == "Candle" %>
+                        <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 100%; border-radius: 360px"%>
+                      <% else %>
+                        <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 100%;     border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+                      <% end %>
+                    <% end %>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center p-5">
+                  <div>
+                    <h5 class="mb-5"><%= product.name %></h5>
+                    <!-- Descsription 1 -->
+                    <div class="mb-3">
+                      <% if product.title !="" %>
+                        <p><strong><%= product.title%></strong></p>
+                      <% end %>
+                      <% if product.description !="" %>
+                        <p><%= simple_format(product.description) %></p>
+                      <% end %>
+                    </div>
+                    <!-- Descsription 2 -->
+                    <div class="mb-3">
+                      <% if product.title1 !="" %>
+                        <p><strong><%= product.title1 %></strong></p>
+                      <% end %>
+                      <% if product.description1 !="" %>
+                        <p><%= simple_format(product.description1) %></p>
+                      <% end %>
+                    </div>
+                    <!-- Descsription 3 -->
+                    <div class="mb-3">
+                      <% if product.title2 !="" %>
+                        <p><strong><%= product.title2 %></strong></p>
+                      <% end %>
+                      <% if product.description2 !="" %>
+                        <p><%= simple_format(product.description2) %></p>
+                      <% end %>
+                    </div>
+                    <!-- Price -->
+                    <div class="mb-3">
+                      <% if product.price != "" %>
+                        <p><%= simple_format(product.price) %></p>
+                      <% end %>
+                    </div>
+                    <%= link_to "SHOP VIA TOKOPEDIA", "", class:"btn btn-square-black" %>
+                    <%= link_to "SHOP VIA SHOPEE", "", class:"btn btn-square-black" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% else %>
+            <div class="container hide-on-small my-5 py-5">
+              <div class="row">
+                <div class="col-12 col-md-6 d-flex align-items-center p-5">
+                  <div>
+                    <h5 class="mb-5"><%= product.name %></h5>
+                    <!-- Descsription 1 -->
+                    <div class="mb-3">
+                      <% if product.title !="" %>
+                        <p><strong><%= product.title%></strong></p>
+                      <% end %>
+                      <% if product.description !="" %>
+                        <p><%= simple_format(product.description) %></p>
+                      <% end %>
+                    </div>
+                    <!-- Descsription 2 -->
+                    <div class="mb-3">
+                      <% if product.title1 !="" %>
+                        <p><strong><%= product.title1 %></strong></p>
+                      <% end %>
+                      <% if product.description1 !="" %>
+                        <p><%= simple_format(product.description1) %></p>
+                      <% end %>
+                    </div>
+                    <!-- Descsription 3 -->
+                    <div class="mb-3">
+                      <% if product.title2 !="" %>
+                        <p><strong><%= product.title2 %></strong></p>
+                      <% end %>
+                      <% if product.description2 !="" %>
+                        <p><%= simple_format(product.description2) %></p>
+                      <% end %>
+                    </div>
+                    <!-- Price -->
+                    <div class="mb-3">
+                      <% if product.price != "" %>
+                        <p><%= simple_format(product.price) %></p>
+                      <% end %>
+                    </div>
+                    <%= link_to "SHOP VIA TOKOPEDIA", "", class:"btn btn-square-black" %>
+                    <%= link_to "SHOP VIA SHOPEE", "", class:"btn btn-square-black" %>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class=" my-4">
+                    <% if product.picture1.attached? %>
+                      <% if product.category_product == "Candle" %>
+                        <%= cl_image_tag product.picture1.key, class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 436px; border-radius: 360px"%>
+                      <% else %>
+                        <%= cl_image_tag product.picture1.key, class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 436px; border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+                      <% end %>
+                    <% else %>
+                      <% if product.category_product == "Candle" %>
+                        <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 100%; border-radius: 360px"%>
+                      <% else %>
+                        <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 100%;     border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+                      <% end %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+          <!-- Mobile version -->
+          <div class="container hide-on-large my-5 py-5" style="margin-right: 0 !important; margin-left: 0 !important">
+            <div class="align-items-center">
+              <h5 class="mb-4"><%= product.name %></h5>
+              <div class="my-4">
+                <% if product.picture1.attached?%>
+                  <%= cl_image_tag product.picture1.key, class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
+                <% else %>
+                  <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
+                <% end %>
+              </div>
+              <div>
+                <!-- Descsription 1 -->
+                <div class="mb-3">
+                  <% if product.title !="" %>
+                    <p><strong><%= product.title%></strong></p>
+                  <% end %>
+                  <% if product.description !="" %>
+                    <p><%= simple_format(product.description) %></p>
+                  <% end %>
+                </div>
+                <!-- Descsription 2 -->
+                <div class="mb-3">
+                  <% if product.title1 !="" %>
+                    <p><strong><%= product.title1 %></strong></p>
+                  <% end %>
+                  <% if product.description1 !="" %>
+                    <p><%= simple_format(product.description1) %></p>
+                  <% end %>
+                </div>
+                <!-- Descsription 3 -->
+                <div class="mb-3">
+                  <% if product.title2 !="" %>
+                    <p><strong><%= product.title2 %></strong></p>
+                  <% end %>
+                  <% if product.description2 !="" %>
+                    <p><%= simple_format(product.description2) %></p>
+                  <% end %>
+                </div>
+                <!-- Price -->
+                <div class="mb-3">
+                  <% if product.price != "" %>
+                    <p><%= simple_format(product.price) %></p>
+                  <% end %>
+                </div>
+                <%= link_to "SHOP VIA TOKOPEDIA", "", class:"btn btn-square-black" %>
+                <%= link_to "SHOP VIA SHOPEE", "", class:"btn btn-square-black" %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      `);
+    }
+    else if (id === "candle") {
+      addClassSelected(e.target);
+      whereToShow.innerHTML = "";
+      whereToShow.insertAdjacentHTML("beforeend", `
+        <% counter = 1 %>
+        <% @product_candle.each do |product| %>
+          <% counter +=1 %>
+          <% if counter % 2 == 0 %>
+            <!-- Laptop version -->
+            <div class="container hide-on-small my-5 py-5">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class=" my-4">
+                    <% if product.picture1.attached? %>
+                      <% if product.category_product == "Candle" %>
+                        <%= cl_image_tag product.picture1.key, class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 436px; border-radius: 360px"%>
+                      <% else %>
+                        <%= cl_image_tag product.picture1.key, class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 436px; border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+                      <% end %>
+                    <% else %>
+                      <% if product.category_product == "Candle" %>
+                        <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 100%; border-radius: 360px"%>
+                      <% else %>
+                        <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 100%;     border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+                      <% end %>
+                    <% end %>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center p-5">
+                  <div>
+                    <h5 class="mb-5"><%= product.name %></h5>
+                    <!-- Descsription 1 -->
+                    <div class="mb-3">
+                      <% if product.title !="" %>
+                        <p><strong><%= product.title%></strong></p>
+                      <% end %>
+                      <% if product.description !="" %>
+                        <p><%= simple_format(product.description) %></p>
+                      <% end %>
+                    </div>
+                    <!-- Descsription 2 -->
+                    <div class="mb-3">
+                      <% if product.title1 !="" %>
+                        <p><strong><%= product.title1 %></strong></p>
+                      <% end %>
+                      <% if product.description1 !="" %>
+                        <p><%= simple_format(product.description1) %></p>
+                      <% end %>
+                    </div>
+                    <!-- Descsription 3 -->
+                    <div class="mb-3">
+                      <% if product.title2 !="" %>
+                        <p><strong><%= product.title2 %></strong></p>
+                      <% end %>
+                      <% if product.description2 !="" %>
+                        <p><%= simple_format(product.description2) %></p>
+                      <% end %>
+                    </div>
+                    <!-- Price -->
+                    <div class="mb-3">
+                      <% if product.price != "" %>
+                        <p><%= simple_format(product.price) %></p>
+                      <% end %>
+                    </div>
+                    <%= link_to "SHOP VIA TOKOPEDIA", "", class:"btn btn-square-black" %>
+                    <%= link_to "SHOP VIA SHOPEE", "", class:"btn btn-square-black" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% else %>
+            <div class="container hide-on-small my-5 py-5">
+              <div class="row">
+                <div class="col-12 col-md-6 d-flex align-items-center p-5">
+                  <div>
+                    <h5 class="mb-5"><%= product.name %></h5>
+                    <!-- Descsription 1 -->
+                    <div class="mb-3">
+                      <% if product.title !="" %>
+                        <p><strong><%= product.title%></strong></p>
+                      <% end %>
+                      <% if product.description !="" %>
+                        <p><%= simple_format(product.description) %></p>
+                      <% end %>
+                    </div>
+                    <!-- Descsription 2 -->
+                    <div class="mb-3">
+                      <% if product.title1 !="" %>
+                        <p><strong><%= product.title1 %></strong></p>
+                      <% end %>
+                      <% if product.description1 !="" %>
+                        <p><%= simple_format(product.description1) %></p>
+                      <% end %>
+                    </div>
+                    <!-- Descsription 3 -->
+                    <div class="mb-3">
+                      <% if product.title2 !="" %>
+                        <p><strong><%= product.title2 %></strong></p>
+                      <% end %>
+                      <% if product.description2 !="" %>
+                        <p><%= simple_format(product.description2) %></p>
+                      <% end %>
+                    </div>
+                    <!-- Price -->
+                    <div class="mb-3">
+                      <% if product.price != "" %>
+                        <p><%= simple_format(product.price) %></p>
+                      <% end %>
+                    </div>
+                    <%= link_to "SHOP VIA TOKOPEDIA", "", class:"btn btn-square-black" %>
+                    <%= link_to "SHOP VIA SHOPEE", "", class:"btn btn-square-black" %>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class=" my-4">
+                    <% if product.picture1.attached? %>
+                      <% if product.category_product == "Candle" %>
+                        <%= cl_image_tag product.picture1.key, class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 436px; border-radius: 360px"%>
+                      <% else %>
+                        <%= cl_image_tag product.picture1.key, class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 436px; border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+                      <% end %>
+                    <% else %>
+                      <% if product.category_product == "Candle" %>
+                        <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 100%; border-radius: 360px"%>
+                      <% else %>
+                        <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:674px; object-position: center center; object-fit: cover; width: 100%;     border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+                      <% end %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+          <!-- Mobile version -->
+          <div class="container hide-on-large my-5 py-5" style="margin-right: 0 !important; margin-left: 0 !important">
+            <div class="align-items-center">
+              <h5 class="mb-4"><%= product.name %></h5>
+              <div class="my-4">
+                <% if product.picture1.attached?%>
+                  <%= cl_image_tag product.picture1.key, class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
+                <% else %>
+                  <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
+                <% end %>
+              </div>
+              <div>
+                <!-- Descsription 1 -->
+                <div class="mb-3">
+                  <% if product.title !="" %>
+                    <p><strong><%= product.title%></strong></p>
+                  <% end %>
+                  <% if product.description !="" %>
+                    <p><%= simple_format(product.description) %></p>
+                  <% end %>
+                </div>
+                <!-- Descsription 2 -->
+                <div class="mb-3">
+                  <% if product.title1 !="" %>
+                    <p><strong><%= product.title1 %></strong></p>
+                  <% end %>
+                  <% if product.description1 !="" %>
+                    <p><%= simple_format(product.description1) %></p>
+                  <% end %>
+                </div>
+                <!-- Descsription 3 -->
+                <div class="mb-3">
+                  <% if product.title2 !="" %>
+                    <p><strong><%= product.title2 %></strong></p>
+                  <% end %>
+                  <% if product.description2 !="" %>
+                    <p><%= simple_format(product.description2) %></p>
+                  <% end %>
+                </div>
+                <!-- Price -->
+                <div class="mb-3">
+                  <% if product.price != "" %>
+                    <p><%= simple_format(product.price) %></p>
+                  <% end %>
+                </div>
+                <%= link_to "SHOP VIA TOKOPEDIA", "", class:"btn btn-square-black" %>
+                <%= link_to "SHOP VIA SHOPEE", "", class:"btn btn-square-black" %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      `);
+    };
+  });
+</script>

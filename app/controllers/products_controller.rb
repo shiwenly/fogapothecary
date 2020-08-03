@@ -4,7 +4,11 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   def index
-    @products = Product.all
+    @products = Product.all.order(created_at: :asc)
+    @product_spray = Product.where("category_product = ?", "Spray").order(created_at: :asc)
+    @product_mist = Product.where("category_product = ?", "Mist").order(created_at: :asc)
+    @product_candle = Product.where("category_product = ?", "Candle").order(created_at: :asc)
+
   end
 
   def show
