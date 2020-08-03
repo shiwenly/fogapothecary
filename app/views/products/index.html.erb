@@ -30,9 +30,9 @@
       <div class="col-12 col-md-6">
         <div class=" my-4">
           <% if product.picture1.attached? %>
-            <%= cl_image_tag product.picture1.key, class: "", style: "height:700px; object-position: center center; object-fit: cover; width: 100%; border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+            <%= cl_image_tag product.picture1.key, class: "", style: "height:700px; object-position: center center; object-fit: cover; width: 80%; border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
           <% else %>
-            <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:700px; object-position: center center; object-fit: cover; width: 100%;     border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
+            <%= cl_image_tag "https://res.cloudinary.com/sl-square/image/upload/v1596359762/default_annonce_p5mk7k.png", class: "", style: "height:700px; object-position: center center; object-fit: cover; width: 80%;     border-top-left-radius: 30% 260px; border-top-right-radius: 120% 1000px; border-bottom-left-radius: 120% 1000px; border-bottom-right-radius: 30% 260px;"%>
           <% end %>
         </div>
       </div>
