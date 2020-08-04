@@ -8,6 +8,17 @@ require "open-uri"
 #   Character.create(name: 'Luke', movie: movies.first)
 Product.delete_all
 
+file = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596537789/banner_products_cropped_mf3nhf.jpg')
+product = Product.create!(
+  title: "EXPLORE OUR PRODUCTS",
+  description: "
+  Explore our wellness range including sprays, mists, candles and balm. Derived from natural ingredients and therapeutic essential oils.
+  ",
+  description1: "Safe for skin, kids and family."
+  statut: "banner_product",
+  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+)
+product.picture1.attach(io: file, filename: 'eco-spray.png', content_type: 'image/jpg')
 
 file = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596466022/ECO_SPRAY_dy5sj7.jpg')
 product = Product.create!(

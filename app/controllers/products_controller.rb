@@ -1,14 +1,14 @@
 class ProductsController < ApplicationController
 
   skip_before_action :authenticate_user!, only: [:index, :show]
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_product, only: [:show, :update, :destroy]
 
   def index
-    @products = Product.all.order(created_at: :asc)
-    @product_spray = Product.where("category_product = ?", "Spray").order(created_at: :asc)
-    @product_mist = Product.where("category_product = ?", "Mist").order(created_at: :asc)
-    @product_candle = Product.where("category_product = ?", "Candle").order(created_at: :asc)
-
+    @products = Product.where("statut = ?", "active" ).order(created_at: :asc)
+    @product_spray = Product.where("category_product = ? AND statut = ?", "Spray", "active" ).order(created_at: :asc)
+    @product_mist = Product.where("category_product = ?  AND statut = ?", "Mist", "active").order(created_at: :asc)
+    @product_candle = Product.where("category_product = ?  AND statut = ?", "Candle", "active").order(created_at: :asc)
+    @product_banner = Product.where("statut = ?", "banner_product")[0]
   end
 
   def show
@@ -30,20 +30,27 @@ class ProductsController < ApplicationController
   end
 
   def edit
-
+    if params[:from] == "edit_banner"
+      @product = Product.where("statut = ?", "banner_product")[0]
+    else
+      @product = Product.find(params[:id])
+    end
   end
 
   def update
     if @product.update(product_params)
-      redirect_to @product
+      redirect_to products_path
     else
       render :edit
     end
   end
 
   def destroy
+
     @product.statut = "deleted"
+
     @product.save
+    redirect_to products_path
   end
 
   private

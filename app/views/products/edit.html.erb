@@ -1,1 +1,22 @@
-edit.html.erb
+<h1 class="text-center mt-5 mb-4">List a new product</h1>
+<div class="container center">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-6">
+      <div class="center">
+        <%= simple_form_for [@product] do |f| %>
+          <%= f.input :name, label: "Title" %>
+          <%= f.input :category_product, collection: %w(Mist Spray Cream) %>
+          <%= f.input :title %>
+          <%= f.input :description %>
+          <%= f.input :title1 %>
+          <%= f.input :description1 %>
+          <%= f.input :title2 %>
+          <%= f.input :description2 %>
+          <%= f.input :price %>
+          <%= f.input :picture1, as: :file %>
+          <%= f.submit "Update", class: "btn btn-yellow-mustard mb-2" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
