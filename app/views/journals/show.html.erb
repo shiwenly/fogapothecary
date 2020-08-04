@@ -1,0 +1,62 @@
+<!-- Laptop version -->
+<div class="container my-5 hide-on-small">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <%= cl_image_tag(@journal.picture1.key, class: "mb-4", style: "height:460px; object-position: center center; object-fit: cover; width: 100%") %>
+      <% if @journal.picture2.attached? && @journal.picture3.attached? %>
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <%= cl_image_tag(@journal.picture2.key, class: "mb-4", style: "height:230px; object-position: center center; object-fit: cover; width: 100%") %>
+          </div>
+          <div class="col-12 col-md-6">
+            <%= cl_image_tag(@journal.picture3.key, class: "mb-4", style: "height:230px; object-position: center center; object-fit: cover; width: 100%") %>
+          </div>
+        </div>
+      <% end %>
+      <% if @journal.picture4.attached? %>
+        <%= cl_image_tag(@journal.picture4.key, class: "mb-4", style: "height:460px; object-position: center center; object-fit: cover; width: 100%") %>
+      <% end %>
+    </div>
+    <div class="col-12 col-md-6 px-5">
+      <div class="d-flex">
+        <p style="font-size: 30px"><%= @journal.title %></p>
+        <% if user_signed_in? %>
+          <%= link_to "", edit_journal_path(@journal), class:"fas fa-edit ml-2 mt-2" %>
+          <p style="font-size: 24px">/</p>
+          <%= link_to '', journal_path(@journal), method: :delete, data: { confirm: 'Are you sure you cant to delete this journal ?'}, class:"fas fa-trash mt-2"  %>
+        <% end %>
+      </div>
+      <p style="font-size: 12px"><%= simple_format(@journal.description) %></p>
+    </div>
+  </div>
+</div>
+<!-- Mobile version -->
+<div class="container mb-5 hide-on-large">
+  <div class="row">
+    <div class="col-12 col-md-6 p-5">
+      <div class="d-flex">
+        <p style="font-size: 30px"><%= @journal.title %></p>
+        <% if user_signed_in? %>
+          <%= link_to "", edit_journal_path(@journal), class:"fas fa-edit ml-2 mt-2" %>
+          <p style="font-size: 24px">/</p>
+          <%= link_to '', journal_path(@journal), method: :delete, data: { confirm: 'Are you sure you cant to delete this journal ?'}, class:"fas fa-trash mt-2"  %>
+        <% end %>
+      </div>
+      <p style="font-size: 12px"><%= simple_format(@journal.description) %></p>
+    </div>
+    <div class="col-12 col-md-6">
+      <% if @journal.picture1.attached? %>
+        <%= cl_image_tag(@journal.picture1.key, class: "mb-4", style: "height:260px; object-position: center center; object-fit: cover; width: 100%") %>
+      <% end %>
+      <% if @journal.picture2.attached? %>
+        <%= cl_image_tag(@journal.picture2.key, class: "mb-4", style: "height:260px; object-position: center center; object-fit: cover; width: 100%") %>
+      <% end %>
+      <% if @journal.picture3.attached? %>
+        <%= cl_image_tag(@journal.picture3.key, class: "mb-4", style: "height:260px; object-position: center center; object-fit: cover; width: 100%") %>
+      <% end %>
+      <% if @journal.picture4.attached? %>
+        <%= cl_image_tag(@journal.picture4.key, class: "mb-4", style: "height:260px; object-position: center center; object-fit: cover; width: 100%") %>
+      <% end %>
+    </div>
+  </div>
+</div>

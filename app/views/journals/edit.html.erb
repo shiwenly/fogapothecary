@@ -1,0 +1,18 @@
+<h1 class="text-center mt-5 mb-4">List a new article</h1>
+<div class="container center">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-6">
+      <div class="center">
+        <%= simple_form_for [@journal] do |f| %>
+          <%= f.input :title %>
+          <%= f.input :description %>
+          <%= f.input :picture1, as: :file %>
+          <%= f.input :picture2, as: :file %>
+          <%= f.input :picture3, as: :file %>
+          <%= f.input :picture4, as: :file %>
+          <%= f.submit "Update", class: "btn btn btn-yellow-mustard mb-2" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -17,7 +17,7 @@
         <h5><%= link_to "Stockist", "#", class: "nav-link", style:"font-size: 18px"%></h5>
       </li>
       <li class="nav-item active mx-4">
-        <h5><%= link_to "Journal", "#", class: "nav-link", style:"font-size: 18px"%></h5>
+        <h5><%= link_to "Journal", journals_path, class: "nav-link", style:"font-size: 18px"%></h5>
       </li>
       <li class="nav-item active mx-4">
         <h5><%= link_to "Contact", "#", class: "nav-link", style:"font-size: 18px"%></h5>
@@ -27,6 +27,7 @@
           <%= image_tag "https://res.cloudinary.com/fogapothecary/image/upload/v1596465106/default_profile_kwhszl.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "List new product", new_product_path, class: "dropdown-item" %>
+            <%= link_to "List new journal", new_journal_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>

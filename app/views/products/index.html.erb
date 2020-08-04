@@ -10,7 +10,7 @@
   <div class="d-flex justify-content-center align-items-center mb-4">
     <p class="mb-0" style="font-size: 18px"><%= @product_banner.title %></p>
     <% if user_signed_in?%>
-      <%= link_to "", edit_product_path(@product_banner, {from: 'edit_banner'}), class:"fas fa-edit ml-2"   %>
+      <%= link_to "", edit_product_path(@product_banner, {from: 'edit_banner'}), class:"fas fa-edit ml-2" %>
     <% end %>
   </div>
   <div class="row">
