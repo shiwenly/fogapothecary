@@ -14,7 +14,7 @@ product = Product.create!(
   description: "
   Explore our wellness range including sprays, mists, candles and balm. Derived from natural ingredients and therapeutic essential oils.
   ",
-  description1: "Safe for skin, kids and family."
+  description1: "Safe for skin, kids and family.",
   statut: "banner_product",
   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
 )
