@@ -4,9 +4,11 @@ class JournalsController < ApplicationController
 
   def index
     @journals = Journal.where("statut = ?", "active" ).order(created_at: :asc)
+    @default_pic = "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png"
   end
 
   def show
+    @default_pic = "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png"
   end
 
   def new

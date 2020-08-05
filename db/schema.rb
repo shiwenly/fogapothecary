@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_04_181556) do
+ActiveRecord::Schema.define(version: 2020_08_05_131917) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,10 +39,10 @@ ActiveRecord::Schema.define(version: 2020_08_04_181556) do
   create_table "journals", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.string "picture1", default: "image/upload/v1596465097/default_annonce_wxhhsp.png"
-    t.string "picture2", default: "image/upload/v1596465097/default_annonce_wxhhsp.png"
-    t.string "picture3", default: "image/upload/v1596465097/default_annonce_wxhhsp.png"
-    t.string "picture4", default: "image/upload/v1596465097/default_annonce_wxhhsp.png"
+    t.string "picture1", default: "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png"
+    t.string "picture2", default: "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png"
+    t.string "picture3", default: "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png"
+    t.string "picture4", default: "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -50,10 +50,37 @@ ActiveRecord::Schema.define(version: 2020_08_04_181556) do
     t.index ["user_id"], name: "index_journals_on_user_id"
   end
 
+  create_table "pages", force: :cascade do |t|
+    t.string "banner_pic", default: "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png"
+    t.string "title"
+    t.text "description"
+    t.string "rounded_pic", default: "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png"
+    t.string "separation_pic", default: "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png"
+    t.string "title1"
+    t.text "description1"
+    t.string "square_pic", default: "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png"
+    t.string "title2"
+    t.text "description2"
+    t.string "benefit1"
+    t.string "benefit2"
+    t.string "benefit3"
+    t.string "benefit4"
+    t.string "title3"
+    t.text "description3"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "product1"
+    t.integer "product2"
+    t.integer "product3"
+    t.integer "product4"
+    t.index ["user_id"], name: "index_pages_on_user_id"
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.string "picture1", default: "image/upload/v1596465097/default_annonce_wxhhsp.png"
+    t.string "picture1", default: "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -82,5 +109,6 @@ ActiveRecord::Schema.define(version: 2020_08_04_181556) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "journals", "users"
+  add_foreign_key "pages", "users"
   add_foreign_key "products", "users"
 end

@@ -1,22 +1,38 @@
+<!-- Laptop version -->
 <div class="container my-5 py-5 hide-on-small">
   <div class="row">
     <div class="col-12 col-md-6 d-flex align-items-center p-5">
       <div>
-        <h3 class="mb-4" style="font-size: 40px">A CLEAN COMPANY</h3>
-        <p>We believe it is our responsibility to prioritise ethical, sustainable practices in all areas of what we do. That means: ethically-sourced ingredients, safety, sustainability, transparency, peace of mind and a clean conscience. Not transporting water, testing on animals, harmful chemicals, palm oil, single-use plastics, fillers, chlorides, colourants and compromises.</p>
+        <div class="d-flex align-items-center mb-4">
+          <h3 class="mb-0" style="font-size: 40px"><%= @page.title %></h3>
+          <% if user_signed_in?%>
+            <%= link_to "", edit_page_path(@page), class:"fas fa-edit ml-2" %>
+          <% end %>
+        </div>
+        <p><%= simple_format(@page.description) %></p>
       </div>
     </div>
     <div class="col-12 col-md-6">
-      <%= cl_image_tag "https://res.cloudinary.com/fogapothecary/image/upload/v1596459674/clean_company_vwc6f1.jpg", style:"object-fit: cover; border-radius: 80px; height: 570px; width: 100%" %>
+      <% if @page.rounded_pic.attached? %>
+        <%= cl_image_tag @page.rounded_pic.key, style:"object-fit: cover; border-radius: 80px; height: 570px; width: 100%" %>
+      <% else %>
+        <%= cl_image_tag @default_pic, style:"object-fit: cover; border-radius: 80px; height: 570px; width: 100%" %>
+      <% end %>
     </div>
   </div>
 </div>
+<!-- Mobile version -->
 <div class="container my-5 pt-5 hide-on-large">
   <div class="">
     <div class=" d-flex align-items-center px-3">
       <div>
-        <h5 class="mb-4 text-center">A CLEAN COMPANY</h5>
-        <p>We believe it is our responsibility to prioritise ethical, sustainable practices in all areas of what we do. That means: ethically-sourced ingredients, safety, sustainability, transparency, peace of mind and a clean conscience. Not transporting water, testing on animals, harmful chemicals, palm oil, single-use plastics, fillers, chlorides, colourants and compromises.</p>
+        <div class="d-flex align-items-center mb-4">
+          <h5 class="mb-0"><%= @page.title %></h5>
+          <% if user_signed_in?%>
+            <%= link_to "", edit_page_path(@page), class:"fas fa-edit ml-2" %>
+          <% end %>
+        </div>
+        <p><%= simple_format(@page.description) %></p>
       </div>
     </div>
   </div>

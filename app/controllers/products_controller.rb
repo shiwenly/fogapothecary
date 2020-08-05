@@ -8,6 +8,7 @@ class ProductsController < ApplicationController
     @product_mist = Product.where("category_product = ?  AND statut = ?", "Mist", "active").order(created_at: :asc)
     @product_candle = Product.where("category_product = ?  AND statut = ?", "Candle", "active").order(created_at: :asc)
     @product_banner = Product.where("statut = ?", "banner_product")[0]
+    @default_pic = "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png"
   end
 
   def show

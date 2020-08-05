@@ -4,14 +4,14 @@
   <% @journals.each do |journal| %>
     <div class="col-12 col-md-4 my-4">
       <%= link_to journal_path(journal), style:"text-decoration: none" do %>
-        <% if journal.picture1.attached?  %>
+        <% if journal.picture1.attached? %>
           <div class="journal-card" style="height: 260px; background-size: cover; background-position: center; background-image:url('<%= cl_image_path journal.picture1.key, height: 300, width: 400, crop: :fill %>')">
             <div class="container d-flex align-items-center justify-content-center" style="height: 260px">
               <h5 style="font-size: ; letter-spacing: 1px; text-align: center"><%= journal.title %></h5>
             </div>
           </div>
         <% else %>
-          <div class="journal-card" style="height: 260px; background-size: cover; background-position: center; background-image:url('<%= cl_image_path "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png", height: 300, width: 400, crop: :fill %>')">
+          <div class="journal-card" style="height: 260px; background-size: cover; background-position: center; background-image:url('<%= cl_image_path @default_pic, height: 300, width: 400, crop: :fill %>')">
             <div class="container d-flex align-items-center justify-content-center" style="height: 260px">
               <h5 style="font-size: ; letter-spacing: 1px; text-align: center"><%= journal.title %></h5>
             </div>

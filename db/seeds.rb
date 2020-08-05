@@ -8,6 +8,9 @@ require "open-uri"
 #   Character.create(name: 'Luke', movie: movies.first)
 # Product.delete_all
 # Journal.delete_all
+# Page.delete_all
+
+# ==============PRODUCT SEED==================
 
 # file = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596537789/banner_products_cropped_mf3nhf.jpg')
 # product = Product.create!(
@@ -312,133 +315,170 @@ require "open-uri"
 # product.picture1.attach(io: file, filename: 'gypsy-candle', content_type: 'image/jpg')
 
 
-file1 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596430992/samples/animals/three-dogs.jpg')
-file2 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
-file3 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
-file4 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
-journal = Journal.create!(
-  title: "Obcaecati doloremque culpa",
+# ============== JOURNAL SEED==================
+
+# file1 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596430992/samples/animals/three-dogs.jpg')
+# file2 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
+# file3 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
+# file4 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
+# journal = Journal.create!(
+#   title: "Obcaecati doloremque culpa",
+#   description: "
+#   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
+
+#   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
+
+#   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
+#   ",
+#   statut: "active",
+#   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+# )
+# journal.picture1.attach(io: file1, filename: 'file1', content_type: 'image/jpg')
+# journal.picture2.attach(io: file2, filename: 'file2', content_type: 'image/jpg')
+# journal.picture3.attach(io: file3, filename: 'file3', content_type: 'image/jpg')
+# journal.picture4.attach(io: file4, filename: 'file4', content_type: 'image/jpg')
+
+
+# file1 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596430981/sample.jpg')
+# file2 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
+# file3 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
+# file4 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
+# journal = Journal.create!(
+#   title: "Facilis veniam dicta",
+#   description: "
+#   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
+
+#   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
+
+#   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
+#   ",
+#   statut: "active",
+#   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+# )
+# journal.picture1.attach(io: file1, filename: 'file1', content_type: 'image/jpg')
+# journal.picture2.attach(io: file2, filename: 'file2', content_type: 'image/jpg')
+# journal.picture3.attach(io: file3, filename: 'file3', content_type: 'image/jpg')
+# journal.picture4.attach(io: file4, filename: 'file4', content_type: 'image/jpg')
+
+
+# file1 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596430990/samples/bike.jpg')
+# file2 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
+# file3 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
+# file4 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
+# journal = Journal.create!(
+#   title: "Incidunt dolore rem",
+#   description: "
+#   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
+
+#   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
+
+#   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
+#   ",
+#   statut: "active",
+#   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+# )
+# journal.picture1.attach(io: file1, filename: 'file1', content_type: 'image/jpg')
+# journal.picture2.attach(io: file2, filename: 'file2', content_type: 'image/jpg')
+# journal.picture3.attach(io: file3, filename: 'file3', content_type: 'image/jpg')
+# journal.picture4.attach(io: file4, filename: 'file4', content_type: 'image/jpg')
+
+
+# file1 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596430988/samples/sheep.jpg')
+# file2 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
+# file3 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
+# file4 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
+# journal = Journal.create!(
+#   title: "Consectetur adipisicing elit",
+#   description: "
+#   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
+
+#   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
+
+#   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
+#   ",
+#   statut: "active",
+#   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+# )
+# journal.picture1.attach(io: file1, filename: 'file1', content_type: 'image/jpg')
+# journal.picture2.attach(io: file2, filename: 'file2', content_type: 'image/jpg')
+# journal.picture3.attach(io: file3, filename: 'file3', content_type: 'image/jpg')
+# journal.picture4.attach(io: file4, filename: 'file4', content_type: 'image/jpg')
+
+
+# file1 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596430997/samples/landscapes/nature-mountains.jpg')
+# file2 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
+# file3 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
+# file4 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
+# journal = Journal.create!(
+#   title: "Maiores deserunt nam sint",
+#   description: "
+#   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
+
+#   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
+
+#   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
+#   ",
+#   statut: "active",
+#   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+# )
+# journal.picture1.attach(io: file1, filename: 'file1', content_type: 'image/jpg')
+# journal.picture2.attach(io: file2, filename: 'file2', content_type: 'image/jpg')
+# journal.picture3.attach(io: file3, filename: 'file3', content_type: 'image/jpg')
+# journal.picture4.attach(io: file4, filename: 'file4', content_type: 'image/jpg')
+
+
+# file1 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596430987/samples/food/fish-vegetables.jpg')
+# file2 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
+# file3 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
+# file4 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
+# journal = Journal.create!(
+#   title: "Atque nulla ducimus maiores",
+#   description: "
+#   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
+
+#   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
+
+#   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
+#   ",
+#   statut: "active",
+#   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+# )
+# journal.picture1.attach(io: file1, filename: 'file1', content_type: 'image/jpg')
+# journal.picture2.attach(io: file2, filename: 'file2', content_type: 'image/jpg')
+# journal.picture3.attach(io: file3, filename: 'file3', content_type: 'image/jpg')
+# journal.picture4.attach(io: file4, filename: 'file4', content_type: 'image/jpg')
+
+
+# ============== HOMEPAGE SEED ==================
+
+file1 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596460265/banner_small_s0f8jc.jpg')
+file2 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596459674/clean_company_vwc6f1.jpg')
+file3 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596460279/natural_ingredient_k2corx.jpg')
+file4 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596459675/spray_series_s0seu8.jpg')
+page = Page.create!(
+  title: "A CLEAN COMPANY",
   description: "
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
-
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
-
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
+  We believe it is our responsibility to prioritise ethical, sustainable practices in all areas of what we do. That means: ethically-sourced ingredients, safety, sustainability, transparency, peace of mind and a clean conscience. Not transporting water, testing on animals, harmful chemicals, palm oil, single-use plastics, fillers, chlorides, colourants and compromises.
   ",
-  statut: "active",
+  title1: "Natural Ingredients",
+  description1: "
+  Sugar surfactants and citric acids replace palm oil and chlorides, making Kinfill's concentrates 100 per cent biodegradable and safe for you and the planet.
+  ",
+  title2: "SPRAY SERIES",
+  description2: "
+  Aromatherapy Mist designed for all-over use, selected from pure essential oils to transform your mood anywhere, anytime. Close your eyes and mouth and spray your Aromatherapy Mist from above your head. Inhale deeply and let it transform your mood and wellbeing with a Revitalising, Calming or Balancing scent.
+
+  Prepare for a good night’s sleep by spraying Lavender Mist on your bed linen and pillow before you climb into bed. Prepare for a mood booster with Morning Mist as body perfume.
+  ",
+  title3: "Follow your bliss and the universe will open doors for you where there were only walls.",
+  description3: "Joseph Campbell",
+  benefit1: "Helps to heal burns, cuts and itchy skin",
+  benefit2: "Therapeutic essential oil and Floral extract.",
+  benefit3: "Helps to heal burns, cuts and itchy skin",
+  benefit4: "Therapeutic essential oil and Floral extract.",
   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
 )
-journal.picture1.attach(io: file1, filename: 'file1', content_type: 'image/jpg')
-journal.picture2.attach(io: file2, filename: 'file2', content_type: 'image/jpg')
-journal.picture3.attach(io: file3, filename: 'file3', content_type: 'image/jpg')
-journal.picture4.attach(io: file4, filename: 'file4', content_type: 'image/jpg')
-
-
-file1 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596430981/sample.jpg')
-file2 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
-file3 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
-file4 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
-journal = Journal.create!(
-  title: "Facilis veniam dicta",
-  description: "
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
-
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
-
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
-  ",
-  statut: "active",
-  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
-)
-journal.picture1.attach(io: file1, filename: 'file1', content_type: 'image/jpg')
-journal.picture2.attach(io: file2, filename: 'file2', content_type: 'image/jpg')
-journal.picture3.attach(io: file3, filename: 'file3', content_type: 'image/jpg')
-journal.picture4.attach(io: file4, filename: 'file4', content_type: 'image/jpg')
-
-
-file1 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596430990/samples/bike.jpg')
-file2 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
-file3 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
-file4 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
-journal = Journal.create!(
-  title: "Incidunt dolore rem",
-  description: "
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
-
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
-
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
-  ",
-  statut: "active",
-  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
-)
-journal.picture1.attach(io: file1, filename: 'file1', content_type: 'image/jpg')
-journal.picture2.attach(io: file2, filename: 'file2', content_type: 'image/jpg')
-journal.picture3.attach(io: file3, filename: 'file3', content_type: 'image/jpg')
-journal.picture4.attach(io: file4, filename: 'file4', content_type: 'image/jpg')
-
-
-file1 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596430988/samples/sheep.jpg')
-file2 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
-file3 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
-file4 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
-journal = Journal.create!(
-  title: "Consectetur adipisicing elit",
-  description: "
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
-
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
-
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
-  ",
-  statut: "active",
-  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
-)
-journal.picture1.attach(io: file1, filename: 'file1', content_type: 'image/jpg')
-journal.picture2.attach(io: file2, filename: 'file2', content_type: 'image/jpg')
-journal.picture3.attach(io: file3, filename: 'file3', content_type: 'image/jpg')
-journal.picture4.attach(io: file4, filename: 'file4', content_type: 'image/jpg')
-
-
-file1 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596430997/samples/landscapes/nature-mountains.jpg')
-file2 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
-file3 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
-file4 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
-journal = Journal.create!(
-  title: "Maiores deserunt nam sint",
-  description: "
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
-
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
-
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
-  ",
-  statut: "active",
-  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
-)
-journal.picture1.attach(io: file1, filename: 'file1', content_type: 'image/jpg')
-journal.picture2.attach(io: file2, filename: 'file2', content_type: 'image/jpg')
-journal.picture3.attach(io: file3, filename: 'file3', content_type: 'image/jpg')
-journal.picture4.attach(io: file4, filename: 'file4', content_type: 'image/jpg')
-
-
-file1 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596430987/samples/food/fish-vegetables.jpg')
-file2 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
-file3 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
-file4 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596467708/GYPSY_SPELL_CANDLE_kzcycn.jpg')
-journal = Journal.create!(
-  title: "Atque nulla ducimus maiores",
-  description: "
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
-
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
-
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt nam sint. Incidunt dolore rem, illum beatae voluptas neque magni, facilis veniam dicta! Atque nulla ducimus maiores obcaecati doloremque culpa.
-  ",
-  statut: "active",
-  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
-)
-journal.picture1.attach(io: file1, filename: 'file1', content_type: 'image/jpg')
-journal.picture2.attach(io: file2, filename: 'file2', content_type: 'image/jpg')
-journal.picture3.attach(io: file3, filename: 'file3', content_type: 'image/jpg')
-journal.picture4.attach(io: file4, filename: 'file4', content_type: 'image/jpg')
+page.banner_pic.attach(io: file1, filename: 'file1', content_type: 'image/jpg')
+page.rounded_pic.attach(io: file2, filename: 'file2', content_type: 'image/jpg')
+page.separation_pic.attach(io: file3, filename: 'file3', content_type: 'image/jpg')
+page.square_pic.attach(io: file4, filename: 'file4', content_type: 'image/jpg')

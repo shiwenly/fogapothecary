@@ -2,7 +2,11 @@
 <div class="container my-5 hide-on-small">
   <div class="row">
     <div class="col-12 col-md-6">
-      <%= cl_image_tag(@journal.picture1.key, class: "mb-4", style: "height:460px; object-position: center center; object-fit: cover; width: 100%") %>
+      <% if @journal.picture1.attached? %>
+        <%= cl_image_tag(@journal.picture1.key, class: "mb-4", style: "height:460px; object-position: center center; object-fit: cover; width: 100%") %>
+      <% else %>
+        <%= cl_image_tag(@default_pic, class: "mb-4", style: "height:460px; object-position: center center; object-fit: cover; width: 100%") %>
+      <% end %>
       <% if @journal.picture2.attached? && @journal.picture3.attached? %>
         <div class="row">
           <div class="col-12 col-md-6">
@@ -26,7 +30,7 @@
           <%= link_to '', journal_path(@journal), method: :delete, data: { confirm: 'Are you sure you cant to delete this journal ?'}, class:"fas fa-trash mt-2"  %>
         <% end %>
       </div>
-      <p style="font-size: 12px"><%= simple_format(@journal.description) %></p>
+      <p ><%= simple_format(@journal.description, style:"font-size: 12px") %></p>
     </div>
   </div>
 </div>
@@ -42,11 +46,13 @@
           <%= link_to '', journal_path(@journal), method: :delete, data: { confirm: 'Are you sure you cant to delete this journal ?'}, class:"fas fa-trash mt-2"  %>
         <% end %>
       </div>
-      <p style="font-size: 12px"><%= simple_format(@journal.description) %></p>
+      <p><%= simple_format(@journal.description,  style:"font-size: 12px") %></p>
     </div>
     <div class="col-12 col-md-6">
       <% if @journal.picture1.attached? %>
         <%= cl_image_tag(@journal.picture1.key, class: "mb-4", style: "height:260px; object-position: center center; object-fit: cover; width: 100%") %>
+      <% else %>
+        <%= cl_image_tag(@default_pic, class: "mb-4", style: "height:260px; object-position: center center; object-fit: cover; width: 100%") %>
       <% end %>
       <% if @journal.picture2.attached? %>
         <%= cl_image_tag(@journal.picture2.key, class: "mb-4", style: "height:260px; object-position: center center; object-fit: cover; width: 100%") %>

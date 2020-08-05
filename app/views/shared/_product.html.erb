@@ -3,28 +3,32 @@
   <div class="row">
     <div class="col-12 col-md-6">
       <div class=" my-4">
-        <%= cl_image_tag "https://res.cloudinary.com/fogapothecary/image/upload/v1596459675/spray_series_s0seu8.jpg", class: "rounded-top", style: "height:700px; object-position: center center; object-fit: cover; width: 100%"%>
+        <% if @page.square_pic.attached? %>
+          <%= cl_image_tag @page.square_pic.key, class: "rounded-top", style: "height:700px; object-position: center center; object-fit: cover; width: 100%"%>
+        <% else %>
+          <%= cl_image_tag @default_pic, class: "rounded-top", style: "height:700px; object-position: center center; object-fit: cover; width: 100%"%>
+        <% end %>
       </div>
     </div>
     <div class="col-12 col-md-6 d-flex align-items-center p-5">
       <div>
-        <h5 class="mb-5">SPRAY SERIES</h5>
-        <p class="pb-3">Aromatherapy Mist designed for all-over use, selected from pure essential oils to transform your mood anywhere, anytime. Close your eyes and mouth and spray your Aromatherapy Mist from above your head. Inhale deeply and let it transform your mood and wellbeing with a Revitalising, Calming or Balancing scent. Prepare for a good night’s sleep by spraying Lavender Mist on your bed linen and pillow before you climb into bed. Prepare for a mood booster with Morning Mist as body perfume.</p>
+        <h5 class="mb-5"><%= @page.title2 %></h5>
+        <p class=""><%= simple_format(@page.description2) %></p>
         <div class="row mb-4">
           <div class="col-12 col-md-6 px-5">
-            <p>Helps to heal burns, cuts and itchy skin</p>
+            <p><%= @page.benefit1 %></p>
           </div>
           <div class="col-12 col-md-6 px-5">
-            <p>Therapeutic essential oil and Floral extract.</p>
+            <p><%= @page.benefit2 %></p>
           </div>
           <div class="col-12 col-md-6 px-5">
-            <p>Helps to heal burns, cuts and itchy skin</p>
+            <p><%= @page.benefit3 %></p>
           </div>
           <div class="col-12 col-md-6 px-5">
-            <p>Therapeutic essential oil and Floral extract.</p>
+            <p><%= @page.benefit4 %></p>
           </div>
         </div>
-        <%= link_to "BROWSE OUR PRODUCTS", "", class:"btn btn-square-black" %>
+        <%= link_to "BROWSE OUR PRODUCTS", products_path, class:"btn btn-square-black" %>
       </div>
     </div>
   </div>
@@ -33,26 +37,29 @@
 <div class="container hide-on-large my-5 py-5">
   <div class="align-items-center">
     <div>
-      <h5 class="mb-4 text-center">SPRAY SERIES</h5>
+      <h5 class="mb-4 text-center"><%= @page.title2 %></h5>
       <div class="my-4">
-        <%= cl_image_tag "https://res.cloudinary.com/fogapothecary/image/upload/v1596459675/spray_series_s0seu8.jpg", class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
+        <% if @page.square_pic.attached? %>
+          <%= cl_image_tag @page.square_pic.key, class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
+        <% else %>
+          <%= cl_image_tag @default_pic, class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
+        <% end %>
       </div>
-      <p class="px-3">Aromatherapy Mist designed for all-over use, selected from pure essential oils to transform your mood anywhere, anytime. Close your eyes and mouth and spray your Aromatherapy Mist from above your head. Inhale deeply and let it transform your mood and wellbeing with a Revitalising, Calming or Balancing scent. </p>
-      <p class="px-3">Prepare for a good night’s sleep by spraying Lavender Mist on your bed linen and pillow before you climb into bed. Prepare for a mood booster with Morning Mist as body perfume.</p>
+      <p class="px-3"><%= simple_format(@page.description2) %></p>
       <div class="px-3">
-        <p class="mb-1">Helps to heal burns, cuts and itchy skin</p>
-      </div>
-      <div class="px-3">
-        <p class="mb-1">Therapeutic essential oil and Floral extract.</p>
-      </div>
-      <div class="px-3">
-        <p class="mb-1">Helps to heal burns, cuts and itchy skin</p>
+        <p class="mb-1"><%= @page.benefit1 %></p>
       </div>
       <div class="px-3">
-        <p class="mb-1">Therapeutic essential oil and Floral extract.</p>
+        <p class="mb-1"><%= @page.benefit2 %></p>
+      </div>
+      <div class="px-3">
+        <p class="mb-1"><%= @page.benefit3 %></p>
+      </div>
+      <div class="px-3">
+        <p class="mb-1"><%= @page.benefit4 %></p>
       </div>
       <div class="d-flex justify-content-center mt-4">
-        <%= link_to "BROWSE OUR PRODUCTS", "", class:"btn btn-square-black" %>
+        <%= link_to "BROWSE OUR PRODUCTS", products_path, class:"btn btn-square-black" %>
       </div>
     </div>
   </div>

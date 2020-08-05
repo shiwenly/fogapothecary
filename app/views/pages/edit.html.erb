@@ -1,0 +1,32 @@
+<h1 class="text-center mt-5 mb-4">Update homepage</h1>
+<div class="container center">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-6">
+      <div class="center">
+        <%= simple_form_for [@page] do |f| %>
+          <%= f.input :banner_pic, as: :file %>
+          <%= f.input :title %>
+          <%= f.input :description %>
+          <%= f.input :rounded_pic, as: :file %>
+          <%= f.input :separation_pic, as: :file %>
+          <%= f.input :title1 %>
+          <%= f.input :description1 %>
+          <%= f.input :square_pic, as: :file %>
+          <%= f.input :title2 %>
+          <%= f.input :description2 %>
+          <%= f.input :benefit1 %>
+          <%= f.input :benefit2 %>
+          <%= f.input :benefit3 %>
+          <%= f.input :benefit4 %>
+          <%= f.input :description3 %>
+          <%= f.input :title3 %>
+          <%= f.input :product1, label: "Choose 1st productto display :", include_blank: false, collection: @products,label_method: :name, value_method: :id%>
+          <%= f.input :product2, label: "Choose 2nd product to display:", include_blank: false, collection: @products,label_method: :name, value_method: :id%>
+          <%= f.input :product3, label: "Choose 3rd product to display:", include_blank: false, collection: @products,label_method: :name, value_method: :id%>
+          <%= f.input :product4, label: "Choose 4th product to display:", include_blank: false, collection: @products,label_method: :name, value_method: :id%>
+          <%= f.submit "Update", class: "btn btn btn-yellow-mustard mb-2" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
