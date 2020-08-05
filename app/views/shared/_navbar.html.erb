@@ -1,6 +1,13 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon text-center" style="background-color: #FAF7F3">
   <%= link_to root_path, class: "navbar-brand" do %>
-    <p class="navbar-title mb-0">FOG APOTHECARY</p>
+    <!-- Laptop version -->
+    <div class="hide-on-small">
+      <%= cl_image_tag "https://res.cloudinary.com/fogapothecary/image/upload/v1596652960/LOGO_FOG_2020_cropped_ptm3co.png", style: "width:380px", class: "py-3" %>
+    </div>
+    <!-- Mobile version -->
+    <div class="hide-on-large">
+      <%= cl_image_tag "https://res.cloudinary.com/fogapothecary/image/upload/v1596652960/LOGO_FOG_2020_cropped_ptm3co.png", style: "width:220px", class: "py-3" %>
+    </div>
   <% end %>
   <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
