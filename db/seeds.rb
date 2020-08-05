@@ -476,6 +476,10 @@ page = Page.create!(
   benefit2: "Therapeutic essential oil and Floral extract.",
   benefit3: "Helps to heal burns, cuts and itchy skin",
   benefit4: "Therapeutic essential oil and Floral extract.",
+  product1: 13,
+  product2: 14,
+  product3: 15,
+  product4: 16,
   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
 )
 page.banner_pic.attach(io: file1, filename: 'file1', content_type: 'image/jpg')
