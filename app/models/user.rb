@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :journals, dependent: :destroy
   has_many :products, dependent: :destroy
   has_one :page, dependent: :destroy
+  has_one :philosophy, dependent: :destroy
 end

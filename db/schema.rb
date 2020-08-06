@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_05_131917) do
+ActiveRecord::Schema.define(version: 2020_08_06_161021) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,6 +77,20 @@ ActiveRecord::Schema.define(version: 2020_08_05_131917) do
     t.index ["user_id"], name: "index_pages_on_user_id"
   end
 
+  create_table "philosophies", force: :cascade do |t|
+    t.string "picture1"
+    t.string "title"
+    t.text "description"
+    t.text "description1"
+    t.text "description2"
+    t.text "description3"
+    t.string "title1"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_philosophies_on_user_id"
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -110,5 +124,6 @@ ActiveRecord::Schema.define(version: 2020_08_05_131917) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "journals", "users"
   add_foreign_key "pages", "users"
+  add_foreign_key "philosophies", "users"
   add_foreign_key "products", "users"
 end

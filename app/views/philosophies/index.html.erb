@@ -1,0 +1,63 @@
+<% if @philosophy.picture1.attached? %>
+  <!-- Laptop version -->
+  <div class="hide-on-small" style="height: 520px; background-size: cover; background-position: center; background-image:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= cl_image_path @philosophy.picture1.key, crop: :fill %>')">
+    <div class="container d-flex align-items-center justify-content-center" style="height: 520px">
+      <h1 style="color: white; font-family: Garamond; font-size: ; letter-spacing: 1px; text-align: center"></h1>
+    </div>
+  </div>
+  <!-- MOBILE VERSION -->
+  <div class="hide-on-large" style="height: 360px; background-size: cover; background-position: center; background-image:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= cl_image_path @philosophy.picture1.key, crop: :fill %>')">
+    <div class="text-center pt-3 hide-on-large">
+      <%#= link_to "BOOK NOW", "", class: "nav-link hide-on-mobile nav-white", style:"", class:"btn btn-transparent-bold-white" %>
+    </div>
+    <div class="container d-flex align-items-center justify-content-center" style="height: 240px">
+      <h2 style="color: white; font-family: Garamond; letter-spacing: 1px; text-align: center"></h2>
+    </div>
+  </div>
+<% end %>
+<!-- text about natural ingredient -->
+<div class="text-center my-5 pt-5 px-3">
+  <div class="d-flex align-items-center justify-content-center mb-4">
+    <p class="mb-0" style="font-size: 20px"><%= @philosophy.title %></p>
+    <% if user_signed_in?%>
+      <%= link_to "", edit_philosophy_path(@philosophy), class:"fas fa-edit ml-2" %>
+    <% end %>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-10 offset-md-1">
+      <p style=""><%= simple_format(@philosophy.description, style:"font-family: Playfair Display; font-size: 24px; letter-spacing: 0.1em") %></p>
+    </div>
+  </div>
+</div>
+<!-- text in middle of screen -->
+<!-- Laptop version -->
+<div class="container my-5 pt-5 hide-on-small">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <p><%= @philosophy.description2 %></p>
+    </div>
+    <div class="col-12 col-md-6">
+      <p><%= @philosophy.description2 %></p>
+    </div>
+  </div>
+</div>
+<!-- Mobile version -->
+<div class="container my-5 pt-5 hide-on-large">
+  <div class="row">
+    <div class="col-12 col-md-6 text-justify">
+      <p><%= @philosophy.description2 %></p>
+    </div>
+    <div class="col-12 col-md-6 text-justify mt-4">
+      <p><%= @philosophy.description2 %></p>
+    </div>
+  </div>
+</div>
+<!-- quote -->
+<div class="text-center my-5 py-5 px-3">
+  <div class="row">
+    <div class="col-12 col-md-8 offset-md-2">
+      <h5 class="mb-4" style=""><%= @philosophy.description3 %></h5>
+    </div>
+  </div>
+  <p><%= simple_format(@philosophy.title1, style:"font-size: 20px" ) %></p>
+</div>
