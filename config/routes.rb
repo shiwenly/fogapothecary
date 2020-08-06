@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :products, only: [:show, :new, :create, :index, :edit, :destroy,:update ]
   resources :journals, only: [:show, :new, :create, :index, :edit, :destroy,:update ]
   resources :philosophies, only: [:index, :edit, :update ]
+  resources :stockists, only: [:new, :create, :index, :edit, :destroy,:update ]
 
   # get '/404', to: "errors#not_found"
   # get '/422', to: "errors#unacceptable"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_06_161021) do
+ActiveRecord::Schema.define(version: 2020_08_06_212710) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,12 @@ ActiveRecord::Schema.define(version: 2020_08_06_161021) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "cities", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "journals", force: :cascade do |t|
@@ -109,6 +115,18 @@ ActiveRecord::Schema.define(version: 2020_08_06_161021) do
     t.index ["user_id"], name: "index_products_on_user_id"
   end
 
+  create_table "stockists", force: :cascade do |t|
+    t.string "category"
+    t.string "city"
+    t.string "name"
+    t.string "website"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "statut"
+    t.index ["user_id"], name: "index_stockists_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -126,4 +144,5 @@ ActiveRecord::Schema.define(version: 2020_08_06_161021) do
   add_foreign_key "pages", "users"
   add_foreign_key "philosophies", "users"
   add_foreign_key "products", "users"
+  add_foreign_key "stockists", "users"
 end

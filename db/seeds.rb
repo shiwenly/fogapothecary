@@ -10,6 +10,7 @@ require "open-uri"
 # Journal.delete_all
 # Page.delete_all
 # Philosophy.delete_all
+Stockist.delete_all
 
 # ==============PRODUCT SEED==================
 
@@ -491,24 +492,140 @@ require "open-uri"
 
 # ============== PHILOSOPHY PAGE SEED ==================
 
-file1 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596573480/98DpcgRWDWyQDYACqagcLMqu.jpg')
-philosophy = Philosophy.create!(
-  title: "Natural Ingredients",
-  description: "
-  Sugar surfactants and citric acids replace palm oil and chlorides, making Kinfill's concentrates 100 per cent biodegradable and safe for you and the planet.
-  ",
-  description1: "
-  At FOG, we believe it is our responsibility to prioritise ethical, sustainable practices in all areas of what we do. That means:
-  Producing in The Netherlands, ethically-sourced ingredients, safety, sustainability, transparency, peace of mind and a clean conscience.
-  Not transporting water, testing on animals, harmful chemicals, palm oil, single-use plastics, fillers, chlorides, colourants and compromises.
-  ",
-  description2: "
-  At FOG, we believe it is our responsibility to prioritise ethical, sustainable practices in all areas of what we do. That means:
-  Producing in The Netherlands, ethically-sourced ingredients, safety, sustainability, transparency, peace of mind and a clean conscience.
-  Not transporting water, testing on animals, harmful chemicals, palm oil, single-use plastics, fillers, chlorides, colourants and compromises.
-  ",
-  description3: "Follow your bliss and the universe will open doors for you where there were only walls.",
-  title1: "-Joseph Campbell",
+# file1 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596573480/98DpcgRWDWyQDYACqagcLMqu.jpg')
+# philosophy = Philosophy.create!(
+#   title: "Natural Ingredients",
+#   description: "
+#   Sugar surfactants and citric acids replace palm oil and chlorides, making Kinfill's concentrates 100 per cent biodegradable and safe for you and the planet.
+#   ",
+#   description1: "
+#   At FOG, we believe it is our responsibility to prioritise ethical, sustainable practices in all areas of what we do. That means:
+#   Producing in The Netherlands, ethically-sourced ingredients, safety, sustainability, transparency, peace of mind and a clean conscience.
+#   Not transporting water, testing on animals, harmful chemicals, palm oil, single-use plastics, fillers, chlorides, colourants and compromises.
+#   ",
+#   description2: "
+#   At FOG, we believe it is our responsibility to prioritise ethical, sustainable practices in all areas of what we do. That means:
+#   Producing in The Netherlands, ethically-sourced ingredients, safety, sustainability, transparency, peace of mind and a clean conscience.
+#   Not transporting water, testing on animals, harmful chemicals, palm oil, single-use plastics, fillers, chlorides, colourants and compromises.
+#   ",
+#   description3: "Follow your bliss and the universe will open doors for you where there were only walls.",
+#   title1: "-Joseph Campbell",
+#   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+# )
+# philosophy.picture1.attach(io: file1, filename: 'file1', content_type: 'image/jpg')
+
+# ============== STOCKIST SEED ==================
+
+
+stockist = Stockist.create!(
+  category: "Online Store",
+  name: "TOKOPEDIA",
+  website: "www.tokopedia.com/fogapotheary",
+  statut: "active",
   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
 )
-philosophy.picture1.attach(io: file1, filename: 'file1', content_type: 'image/jpg')
+
+stockist = Stockist.create!(
+  category: "Online Store",
+  name: "SHOPEE",
+  website: "www.shopee.com/fogapothecary",
+  statut: "active",
+  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+)
+
+stockist = Stockist.create!(
+  category: "Online Store",
+  name: "JD.ID",
+  website: "www.jd.id/fogapothecary",
+  statut: "active",
+  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+)
+
+stockist = Stockist.create!(
+  category: "Online Store",
+  name: "GO ECO LOKAL",
+  website: "www.goecolokal.id",
+  statut: "active",
+  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+)
+
+stockist = Stockist.create!(
+  category: "Stockist",
+  name: "Rame by Sana Studio at The Buya Lv.2",
+  city: "JAKARTA",
+  website: "",
+  statut: "active",
+  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+)
+
+stockist = Stockist.create!(
+  category: "Stockist",
+  name: "Sadar Market",
+  city: "JAKARTA",
+  website: "",
+  statut: "active",
+  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+)
+
+stockist = Stockist.create!(
+  category: "Stockist",
+  name: "Gather & Fog Apothecary at Crumble Crew",
+  city: "JAKARTA",
+  website: "",
+  statut: "active",
+  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+)
+
+stockist = Stockist.create!(
+  category: "Stockist",
+  name: "Aksara Kemang",
+  city: "JAKARTA",
+  website: "",
+  statut: "active",
+  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+)
+
+stockist = Stockist.create!(
+  category: "Stockist",
+  name: "The Goods Dept",
+  city: "JAKARTA",
+  website: "www.thegoodsdept.com",
+  statut: "active",
+  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+)
+
+stockist = Stockist.create!(
+  category: "Stockist",
+  name: "Asamula",
+  city: "BALI",
+  website: "",
+  statut: "active",
+  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+)
+
+stockist = Stockist.create!(
+  category: "Stockist",
+  name: "Zero Waste ID",
+  city: "BALI",
+  website: "",
+  statut: "active",
+  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+)
+
+stockist = Stockist.create!(
+  category: "Stockist",
+  name: "Kurasi Lokal",
+  city: "MEDAN",
+  website: "www.kurasilokal.com",
+  statut: "active",
+  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+)
+
+stockist = Stockist.create!(
+  category: "Stockist",
+  name: "AIO Essential",
+  city: "YOGYAKARTA",
+  website: "",
+  statut: "active",
+  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+)
