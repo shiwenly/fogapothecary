@@ -120,10 +120,10 @@ ActiveRecord::Schema.define(version: 2020_08_06_212710) do
     t.string "city"
     t.string "name"
     t.string "website"
+    t.string "statut"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "statut"
     t.index ["user_id"], name: "index_stockists_on_user_id"
   end
 
