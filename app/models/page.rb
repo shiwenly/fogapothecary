@@ -4,4 +4,5 @@ class Page < ApplicationRecord
   has_one_attached :rounded_pic
   has_one_attached :separation_pic
   has_one_attached :square_pic
+  has_one_attached :title2
 end

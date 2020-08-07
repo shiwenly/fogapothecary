@@ -1,28 +1,49 @@
 <% if @page.banner_pic.attached? %>
   <!-- Laptop version -->
-  <div class="hide-on-small" style="height: 520px; background-size: cover; background-position: center; background-image:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= cl_image_path @page.banner_pic.key, crop: :fill %>')">
-    <div class="container d-flex align-items-center justify-content-center" style="height: 520px">
-      <h1 style="color: white; font-family: Garamond; font-size: ; letter-spacing: 1px; text-align: center"></h1>
+  <div class="container-fluid hide-on-small" style="margin: 0px" >
+    <div class="row">
+      <div class="col-12 col-md-6" style="height: 520px; background-size: cover; background-position: center; background-image:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= cl_image_path @page.banner_pic.key, crop: :fill %>')">
+      </div>
+      <div class="col-12 col-md-6 d-flex align-items-center" style="background-color: rgba(0, 0, 0, 0.05)">
+        <div class="p-5 mx-4">
+          <div class="d-flex align-items-center mb-4">
+            <h3 class="mb-0" style="font-size: 40px"><%= @page.title %></h3>
+            <% if user_signed_in?%>
+              <%= link_to "", edit_page_path(@page), class:"fas fa-edit ml-2" %>
+            <% end %>
+          </div>
+          <p><%= simple_format(@page.description) %></p>
+        </div>
+      </div>
     </div>
   </div>
   <!-- MOBILE VERSION -->
-  <div class="hide-on-large" style="height: 360px; background-size: cover; background-position: center; background-image:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= cl_image_path @page.banner_pic.key, crop: :fill %>')">
-    <div class="text-center pt-3 hide-on-large">
-      <%#= link_to "BOOK NOW", "", class: "nav-link hide-on-mobile nav-white", style:"", class:"btn btn-transparent-bold-white" %>
-    </div>
-    <div class="container d-flex align-items-center justify-content-center" style="height: 240px">
-      <h2 style="color: white; font-family: Garamond; letter-spacing: 1px; text-align: center"></h2>
+  <div class="container-fluid hide-on-large" style="margin: 0px" >
+    <div class="row">
+      <div class="col-12 col-md-6" style="height: 360px; background-size: cover; background-position: center; background-image:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= cl_image_path @page.banner_pic.key, crop: :fill %>')">
+      </div>
+      <div class="col-12 col-md-6 d-flex align-items-center" style="background-color: rgba(0, 0, 0, 0.05)">
+        <div class="p-5">
+          <div class="d-flex align-items-center mb-4">
+            <h3 class="mb-0" style="font-size: 40px"><%= @page.title %></h3>
+            <% if user_signed_in?%>
+              <%= link_to "", edit_page_path(@page), class:"fas fa-edit ml-2" %>
+            <% end %>
+          </div>
+          <p><%= simple_format(@page.description) %></p>
+        </div>
+      </div>
     </div>
   </div>
 <% end %>
-<%= render 'shared/clean_company' %>
-<div class="">
-  <% if @page.separation_pic.attached? %>
-    <%= cl_image_tag @page.separation_pic.key, style:"object-fit: cover; width: 100%; height: 398px", class:"picture-mobile" %>
-  <% else %>
-    <%= cl_image_tag @default_pic, style:"object-fit: cover; width: 100%; height: 398px", class:"picture-mobile" %>
-  <% end %>
-</div>
+<%#= render 'shared/clean_company' %>
+<!-- <div class=""> -->
+<%# if @page.separation_pic.attached? %>
+<%#= cl_image_tag @page.separation_pic.key, style:"object-fit: cover; width: 100%; height: 398px", class:"picture-mobile" %>
+<%# else %>
+<%#= cl_image_tag @default_pic, style:"object-fit: cover; width: 100%; height: 398px", class:"picture-mobile" %>
+<%#end %>
+<!-- </div> -->
 <div class="text-center my-5 pt-5 px-3">
   <p class="mb-4" style="font-size: 20px"><%= @page.title1 %></p>
   <div class="row">
@@ -31,13 +52,14 @@
     </div>
   </div>
 </div>
-<%= render 'shared/product' %>
+<%#= render 'shared/product' %>
+<%= render 'shared/icones' %>
 <%= render 'shared/product_list' %>
-<div class="text-center my-5 py-5 px-3">
-  <div class="row">
-    <div class="col-12 col-md-8 offset-md-2">
-      <h5 class="mb-4" style=""><%= @page.description3 %></h5>
-    </div>
-  </div>
-  <p><%= simple_format(@page.title3, style:"font-size: 20px" ) %></p>
-</div>
+<!-- <div class="text-center my-5 py-5 px-3"> -->
+<!-- <div class="row"> -->
+<!-- <div class="col-12 col-md-8 offset-md-2"> -->
+<!-- <h5 class="mb-4" style=""><%#= @page.description3 %></h5> -->
+<!--  </div>
+  </div> -->
+<!-- <p><%#= simple_format(@page.title3, style:"font-size: 20px" ) %></p> -->
+<!-- </div> -->
