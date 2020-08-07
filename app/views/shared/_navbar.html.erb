@@ -31,7 +31,8 @@
           <%= image_tag "https://res.cloudinary.com/fogapothecary/image/upload/v1596465106/default_profile_kwhszl.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "List new product", new_product_path, class: "dropdown-item" %>
-            <%= link_to "List new journal", new_journal_path, class: "dropdown-item" %>
+            <%= link_to "List new stockist", new_stockist_path, class: "dropdown-item" %>
+            <%= link_to "List new ritual", new_journal_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>

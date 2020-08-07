@@ -1,6 +1,6 @@
 class StockistsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
-  before_action :set_product, only: [:update, :destroy]
+  before_action :set_product, only: [:edit, :update, :destroy]
 
   def index
     @stockists = Stockist.where("statut = ? AND category = ?", "active", "Stockist" ).order(created_at: :asc)
@@ -20,9 +20,11 @@ class StockistsController < ApplicationController
     @stockist = Stockist.new(stockist_params)
     @stockist.user_id = current_user.id
     @stockist.statut = "active"
-    if @product.save
-      create_city
-      redirect_to stockist_path
+    if @stockist.save
+      if @stockist.category == "Stockist"
+        create_city
+      end
+      redirect_to stockists_path
     else
       render :new
     end
@@ -41,15 +43,17 @@ class StockistsController < ApplicationController
   end
 
   def destroy
-    @stockist.statut = "deleted"
-    @stockist.save
+    @stockist.destroy
     redirect_to stockists_path
   end
 
   def create_city
     @stockists = Stockist.all
     @stockists.each do |stockist|
-      city = City.find_or_create_by( name: stockist.city)
+      unless stockist.city.nil?
+        city = City.find_or_create_by( name: stockist.city.upcase)
+
+      end
     end
   end
 

@@ -10,7 +10,7 @@ require "open-uri"
 # Journal.delete_all
 # Page.delete_all
 # Philosophy.delete_all
-Stockist.delete_all
+# Stockist.delete_all
 
 # ==============PRODUCT SEED==================
 
@@ -517,115 +517,115 @@ Stockist.delete_all
 # ============== STOCKIST SEED ==================
 
 
-stockist = Stockist.create!(
-  category: "Online Store",
-  name: "TOKOPEDIA",
-  website: "www.tokopedia.com/fogapotheary",
-  statut: "active",
-  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
-)
+# stockist = Stockist.create!(
+#   category: "Online Store",
+#   name: "TOKOPEDIA",
+#   website: "www.tokopedia.com/fogapotheary",
+#   statut: "active",
+#   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+# )
 
-stockist = Stockist.create!(
-  category: "Online Store",
-  name: "SHOPEE",
-  website: "www.shopee.com/fogapothecary",
-  statut: "active",
-  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
-)
+# stockist = Stockist.create!(
+#   category: "Online Store",
+#   name: "SHOPEE",
+#   website: "www.shopee.com/fogapothecary",
+#   statut: "active",
+#   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+# )
 
-stockist = Stockist.create!(
-  category: "Online Store",
-  name: "JD.ID",
-  website: "www.jd.id/fogapothecary",
-  statut: "active",
-  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
-)
+# stockist = Stockist.create!(
+#   category: "Online Store",
+#   name: "JD.ID",
+#   website: "www.jd.id/fogapothecary",
+#   statut: "active",
+#   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+# )
 
-stockist = Stockist.create!(
-  category: "Online Store",
-  name: "GO ECO LOKAL",
-  website: "www.goecolokal.id",
-  statut: "active",
-  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
-)
+# stockist = Stockist.create!(
+#   category: "Online Store",
+#   name: "GO ECO LOKAL",
+#   website: "www.goecolokal.id",
+#   statut: "active",
+#   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+# )
 
-stockist = Stockist.create!(
-  category: "Stockist",
-  name: "Rame by Sana Studio at The Buya Lv.2",
-  city: "JAKARTA",
-  website: "",
-  statut: "active",
-  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
-)
+# stockist = Stockist.create!(
+#   category: "Stockist",
+#   name: "Rame by Sana Studio at The Buya Lv.2",
+#   city: "JAKARTA",
+#   website: "",
+#   statut: "active",
+#   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+# )
 
-stockist = Stockist.create!(
-  category: "Stockist",
-  name: "Sadar Market",
-  city: "JAKARTA",
-  website: "",
-  statut: "active",
-  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
-)
+# stockist = Stockist.create!(
+#   category: "Stockist",
+#   name: "Sadar Market",
+#   city: "JAKARTA",
+#   website: "",
+#   statut: "active",
+#   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+# )
 
-stockist = Stockist.create!(
-  category: "Stockist",
-  name: "Gather & Fog Apothecary at Crumble Crew",
-  city: "JAKARTA",
-  website: "",
-  statut: "active",
-  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
-)
+# stockist = Stockist.create!(
+#   category: "Stockist",
+#   name: "Gather & Fog Apothecary at Crumble Crew",
+#   city: "JAKARTA",
+#   website: "",
+#   statut: "active",
+#   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+# )
 
-stockist = Stockist.create!(
-  category: "Stockist",
-  name: "Aksara Kemang",
-  city: "JAKARTA",
-  website: "",
-  statut: "active",
-  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
-)
+# stockist = Stockist.create!(
+#   category: "Stockist",
+#   name: "Aksara Kemang",
+#   city: "JAKARTA",
+#   website: "",
+#   statut: "active",
+#   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+# )
 
-stockist = Stockist.create!(
-  category: "Stockist",
-  name: "The Goods Dept",
-  city: "JAKARTA",
-  website: "www.thegoodsdept.com",
-  statut: "active",
-  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
-)
+# stockist = Stockist.create!(
+#   category: "Stockist",
+#   name: "The Goods Dept",
+#   city: "JAKARTA",
+#   website: "www.thegoodsdept.com",
+#   statut: "active",
+#   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+# )
 
-stockist = Stockist.create!(
-  category: "Stockist",
-  name: "Asamula",
-  city: "BALI",
-  website: "",
-  statut: "active",
-  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
-)
+# stockist = Stockist.create!(
+#   category: "Stockist",
+#   name: "Asamula",
+#   city: "BALI",
+#   website: "",
+#   statut: "active",
+#   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+# )
 
-stockist = Stockist.create!(
-  category: "Stockist",
-  name: "Zero Waste ID",
-  city: "BALI",
-  website: "",
-  statut: "active",
-  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
-)
+# stockist = Stockist.create!(
+#   category: "Stockist",
+#   name: "Zero Waste ID",
+#   city: "BALI",
+#   website: "",
+#   statut: "active",
+#   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+# )
 
-stockist = Stockist.create!(
-  category: "Stockist",
-  name: "Kurasi Lokal",
-  city: "MEDAN",
-  website: "www.kurasilokal.com",
-  statut: "active",
-  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
-)
+# stockist = Stockist.create!(
+#   category: "Stockist",
+#   name: "Kurasi Lokal",
+#   city: "MEDAN",
+#   website: "www.kurasilokal.com",
+#   statut: "active",
+#   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+# )
 
-stockist = Stockist.create!(
-  category: "Stockist",
-  name: "AIO Essential",
-  city: "YOGYAKARTA",
-  website: "",
-  statut: "active",
-  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
-)
+# stockist = Stockist.create!(
+#   category: "Stockist",
+#   name: "AIO Essential",
+#   city: "YOGYAKARTA",
+#   website: "",
+#   statut: "active",
+#   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+# )
