@@ -9,6 +9,7 @@
 .journal-card:hover {
   > div {
     background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+    border-radius: 360px;
     > h5 {
       color: white;
     }
