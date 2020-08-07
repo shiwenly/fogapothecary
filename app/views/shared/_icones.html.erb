@@ -11,7 +11,7 @@
     <div class="col-6 col-md-2">
       <% if @page.rounded_pic.attached? %>
         <%= cl_image_tag(@page.rounded_pic.key, class: "mb-4", style: "height:160px; object-position: center center; object-fit: cover; width: 100%") %>
-        <p><%= @page.benefit4 %></p>
+        <p><%= @page.benefit2 %></p>
       <% else %>
         <%= cl_image_tag(@default_pic, class: "mb-4", style: "height:160px; object-position: center center; object-fit: cover; width: 100%") %>
       <% end %>
@@ -19,7 +19,7 @@
     <div class="col-6 col-md-2">
       <% if @page.square_pic.attached? %>
         <%= cl_image_tag(@page.square_pic.key, class: "mb-4", style: "height:160px; object-position: center center; object-fit: cover; width: 100%") %>
-        <p><%= @page.benefit4 %></p>
+        <p><%= @page.benefit3 %></p>
       <% else %>
         <%= cl_image_tag(@default_pic, class: "mb-4", style: "height:160px; object-position: center center; object-fit: cover; width: 100%") %>
       <% end %>
