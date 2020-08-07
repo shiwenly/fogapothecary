@@ -6,7 +6,7 @@
       <% if Product.find(@page.product1).picture1.attached? %>
         <%= cl_image_tag Product.find(@page.product1).picture1.key, class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
       <% else %>
-        <%= cl_image_tag @default_pic.key, class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
+        <%= cl_image_tag @default_pic, class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
       <% end %>
       <p class="mt-3 text-center" style="font-size: 16px;"><%= Product.find(@page.product1).name %></p>
     <% end %>
@@ -16,7 +16,7 @@
       <% if Product.find(@page.product2).picture1.attached? %>
         <%= cl_image_tag Product.find(@page.product2).picture1.key, class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
       <% else %>
-        <%= cl_image_tag @default_pic.key, class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
+        <%= cl_image_tag @default_pic, class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
       <% end %>
       <p class="mt-3 text-center" style="font-size: 16px"><%= Product.find(@page.product2).name %></p>
     <% end %>
@@ -36,7 +36,7 @@
       <% if Product.find(@page.product4).picture1.attached? %>
         <%= cl_image_tag Product.find(@page.product4).picture1.key, class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
       <% else %>
-        <%= cl_image_tag @default_pic.key, class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
+        <%= cl_image_tag @default_pic, class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
       <% end %>
       <p class="mt-3 text-center" style="font-size: 16px"><%= Product.find(@page.product4).name %></p>
     <% end %>
