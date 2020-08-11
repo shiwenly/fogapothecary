@@ -13,7 +13,7 @@
               <%= link_to '', faq_path(faq), method: :delete, data: { confirm: 'Are you sure you cant to delete this product ?'}, class:"fas fa-trash mt-2"  %>
             <% end %>
           </div>
-          <p><%= simple_format(faq.answer) %></p>
+          <p><%= simple_format(faq.answer, class:"text-justify") %></p>
         </div>
       <% end %>
     </div>
