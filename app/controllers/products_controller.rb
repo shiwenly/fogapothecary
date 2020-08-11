@@ -69,6 +69,8 @@ class ProductsController < ApplicationController
       :price,
       :picture1,
       :category_product,
+      :toko_link,
+      :shopee_link,
       :statut
     )
   end

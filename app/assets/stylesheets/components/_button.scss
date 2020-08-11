@@ -155,3 +155,23 @@ border: 2px solid #fdd741;
 color: #fdd741;
 background-color: transparent;
 }
+
+.btn-round-black {
+  font-size: 14px;
+  border: 1px solid black;
+  // padding: ;
+  border-radius: 360px;
+  background-color: transparent;
+  font-weight: lighter;
+  transition: all .15s ease-in-out;
+  color: black;
+  i {
+    padding-right: 4px;
+  }
+}
+
+.btn-round-black:hover {
+border: 2px solid #fdd741;
+color: #fdd741;
+background-color: transparent;
+}
