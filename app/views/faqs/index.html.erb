@@ -1,0 +1,12 @@
+<div class="container">
+  <h3 class="hide-on-small text-center my-5" style="font-size: 30px">FAQ</h3>
+  <h5 class="hide-on-large text-center my-5" style="">FAQ</h5>
+  <div class="row">
+    <% @faqs.each do |faq| %>
+      <div class="col-12 col-md-6 mt-4">
+        <p style="font-weight: bolder; font-size: 22px"><%= faq.question %></p>
+        <p><%= simple_format(faq.answer) %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
