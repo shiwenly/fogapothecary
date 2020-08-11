@@ -1,0 +1,16 @@
+<div class="owl-carousel">
+  <% @products.each do |product| %>
+    <% if product.picture1.attached?  %>
+      <%= cl_image_tag product.picture1.key, class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
+    <% else %>
+      <%= cl_image_tag @default_pic, class: "rounded-top", style: "height:360px; object-position: center center; object-fit: cover; width: 100%"%>
+    <% end %>
+  <% end %>
+</div>
+<%= content_for(:after_js) do %>
+  <script>
+    $(document).ready(function(){
+      $('.owl-carousel').owlCarousel();
+    });
+  </script>
+<% end %>

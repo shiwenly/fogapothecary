@@ -15,6 +15,7 @@
       <%= render 'shared/navbar' %>
       <%= render 'shared/flashes' %>
       <%= yield %>
+      <%= yield :after_js %>
     </div>
     <footer>
       <div class="mt-5 pt-3 pt-5"  style="background-color: #FAF7F3; left: 0; bottom: 0; width: 100%; padding-bottom: 100px ">
@@ -28,17 +29,17 @@
               </div>
               <div class="col-12 col-md-6">
                 <div class="row">
-                  <div class="col-12 col-md-4">
+                  <div class="col-12 col-md-6">
                     <p class="ml-0 mb-3 p-0" style=""><span style="">CONTACT</span></p>
-                    <p class="m-0"><a href="" class="m-0 p-0" style="text-decoration: none; color:black" target="_blank">Email Us</a></p>
-                    <p class="m-0"><a href="" class="m-0 p-0" style="text-decoration: none; color:black" target="_blank">Whatsapp</a></p>
+                    <p class="m-0"><a href="" class="m-0 p-0" style="text-decoration: none; color:black" target="_blank">fogapothecary@gmail.com</a></p>
+                    <p class="m-0"><a href="https://api.whatsapp.com/send?phone=6287797866693" class="m-0 p-0" style="text-decoration: none; color:black" target="_blank">Whatsapp</a></p>
                   </div>
-                  <div class="col-12 col-md-4">
+                  <div class="col-12 col-md-3">
                     <p class="ml-0 mb-3 p-0" style=""><span style="">INFO</span></p>
                     <p class="m-0"><a href="" class="m-0 p-0" style="text-decoration: none; color:black" target="_blank">FAQ</a></p>
                     <p class="m-0"><a href="" class="m-0 p-0" style="text-decoration: none; color:black" target="_blank">Shipping Info</a></p>
                   </div>
-                  <div class="col-12 col-md-4">
+                  <div class="col-12 col-md-3">
                     <p class="ml-0 mb-3 p-0" style=""><span style="">FOLLOW US</span></p>
                     <p class="m-0"><a href="https://www.instagram.com/fogapothecary/" class="m-0 p-0" style="text-decoration: none; color:black" target="_blank">Instagram</a></p>
                   </div>
@@ -53,13 +54,13 @@
                 <p class="ml-0 mb-0 p-0" style=""><span style="">ABOUT US</span></p>
                 <p class="ml-0 mt-2 mb-0 p-0" style=""><span style="">FOG Apothecary is a home grown brand established in 2017.</span></p>
               </div>
-              <div class="col-6">
+              <div class="col-12">
                 <p class="ml-0 mb-1 p-0" style=""><span style="">CONTACT</span></p>
-                <p class="m-0"><a href="" class="m-0 p-0" style="text-decoration: none; color:black">Email Us</a></p>
-                <p class="m-0"><a href="" class="m-0 p-0" style="text-decoration: none; color:black" target="_blank">Whatsapp</a></p>
+                <p class="m-0"><a href="fogapothecary@gmail.com" class="m-0 p-0" style="text-decoration: none; color:black">fogapothecary@gmail.com</a></p>
+                <p class="m-0"><a href="https://api.whatsapp.com/send?phone=6287797866693" class="m-0 p-0" style="text-decoration: none; color:black" target="_blank">Whatsapp</a></p>
               </div>
               <div class="col-6">
-                <p class="ml-0 mb-1 p-0" style=""><span style="">INFO</span></p>
+                <p class="mt-4 ml-0 mb-1 p-0" style=""><span style="">INFO</span></p>
                 <p class="m-0"><a href="" class="m-0 p-0" style="text-decoration: none; color:black">FAQ</a></p>
                 <p class="m-0"><a href="" class="m-0 p-0" style="text-decoration: none; color:black">Shipping Info</a></p>
               </div>
@@ -81,7 +82,7 @@
             <div class="hide-on-small col-12 col-md-4 mt-5">
               <div class="d-flex justify-content-end">
                 <p class="text-left" style="font-size: 15px">FOLLOW US</p>
-                <div class="ml-2">
+                <!--  <div class="ml-2">
                   <a href="https://www.instagram.com/fogapothecary/" style="color: black; opacity: 0.6; font-size: 14px" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
                 <div class="ml-2">
@@ -89,14 +90,34 @@
                 </div>
                 <div class="ml-2">
                   <a href="" style="color: black; opacity: 0.6; font-size: 14px" target="_blank"><i class="fab fa-linkedin"></i></a>
-                </div>
+                </div> -->
+                <%= link_to "https://www.instagram.com/fogapothecary/", class: "", target: :blank do %>
+                  <div class="d-flex align-items-center">
+                    <%= cl_image_tag "https://res.cloudinary.com/fogapothecary/image/upload/v1597152461/insta_po5xli.png", style: "width:20px", class: "ml-2 pb-1"%>
+                  </div>
+                <% end %>
+                <%= link_to "https://api.whatsapp.com/send?phone=6287797866693", class: "", target: :blank do %>
+                  <div class="d-flex align-items-center">
+                    <%= cl_image_tag "https://res.cloudinary.com/fogapothecary/image/upload/v1597152151/whatsapp_pqjyva.png", style: "width:20px", class: "ml-2 pb-1" %>
+                  </div>
+                <% end %>
+                <%= link_to "https://www.tokopedia.com/fogapothecaryid", class: "", target: :blank do %>
+                  <div class="d-flex align-items-center">
+                    <%= cl_image_tag "https://res.cloudinary.com/fogapothecary/image/upload/v1597152461/tokoped_zxwjxm.png", style: "width:20px", class: "ml-2 pb-1" %>
+                  </div>
+                <% end %>
+                <%= link_to "https://www.shopee.com/fogapothecaryofficial", class: "", target: :blank do %>
+                  <div class="d-flex align-items-center">
+                    <%= cl_image_tag "https://res.cloudinary.com/fogapothecary/image/upload/v1597152461/shopee_os8whl.png", style: "width:20px", class: "ml-2 pb-1" %>
+                  </div>
+                <% end %>
               </div>
             </div>
             <!-- Mobile version -->
             <div class="hide-on-large col-12 col-md-4 mt-3">
               <div class="d-flex">
                 <p class="text-left" style="font-size: 15px">FOLLOW US</p>
-                <div class="ml-2">
+                <!-- div class="ml-2">
                   <a href="https://www.instagram.com/fogapothecary/" style="color: black; opacity: 0.6; font-size: 14px" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
                 <div class="ml-2">
@@ -105,11 +126,33 @@
                 <div class="ml-2">
                   <a href="" style="color: black; opacity: 0.6; font-size: 14px" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </div>
+                <div> -->
+                <%= link_to "https://www.instagram.com/fogapothecary/", class: "", target: :blank do %>
+                  <div class="d-flex align-items-center">
+                    <%= cl_image_tag "https://res.cloudinary.com/fogapothecary/image/upload/v1597152461/insta_po5xli.png", style: "width:20px", class: "ml-2 pb-1"%>
+                  </div>
+                <% end %>
+                <%= link_to "https://api.whatsapp.com/send?phone=6287797866693", class: "", target: :blank do %>
+                  <div class="d-flex align-items-center">
+                    <%= cl_image_tag "https://res.cloudinary.com/fogapothecary/image/upload/v1597152151/whatsapp_pqjyva.png", style: "width:20px", class: "ml-2 pb-1" %>
+                  </div>
+                <% end %>
+                <%= link_to "https://www.tokopedia.com/fogapothecaryid", class: "", target: :blank do %>
+                  <div class="d-flex align-items-center">
+                    <%= cl_image_tag "https://res.cloudinary.com/fogapothecary/image/upload/v1597152461/tokoped_zxwjxm.png", style: "width:20px", class: "ml-2 pb-1" %>
+                  </div>
+                <% end %>
+                <%= link_to "https://www.shopee.com/fogapothecaryofficial", class: "", target: :blank do %>
+                  <div class="d-flex align-items-center">
+                    <%= cl_image_tag "https://res.cloudinary.com/fogapothecary/image/upload/v1597152461/shopee_os8whl.png", style: "width:20px", class: "ml-2 pb-1" %>
+                  </div>
+                <% end %>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
 </html>

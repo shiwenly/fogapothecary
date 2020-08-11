@@ -15,6 +15,13 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
+import JQuery from 'jquery';
+window.$ = window.JQuery = JQuery;
+
+// Carousel
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel';
+
 console.log('Hello World from Webpacker')
 
 

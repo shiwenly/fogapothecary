@@ -8,8 +8,8 @@
       <% @online_stores.each do |stockist| %>
         <div class="col-12 col-md-5 offset-md-1">
           <div class='mb-5'>
-            <%= link_to "https://#{stockist.website}", target_blank = {target: "_blank"}  do  %>
-              <!-- , style:"text-decoration: none" -->
+            <%= link_to "https://#{stockist.website}", target: :blank, style:"text-decoration: none"    do  %>
+              <!-- -->
               <div class="d-flex mb-2 align-items-center">
                 <h3 class="mb-0" style="font-size: 18px; color: black"><%= stockist.name %></h3>
                 <% if user_signed_in? %>
