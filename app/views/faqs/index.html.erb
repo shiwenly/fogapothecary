@@ -1,19 +1,21 @@
-<div class="container">
-  <h3 class="hide-on-small text-center my-5" style="font-size: 30px">FAQ</h3>
-  <h5 class="hide-on-large text-center my-5" style="">FAQ</h5>
-  <div class="row">
-    <% @faqs.each do |faq| %>
-      <div class="col-12 col-md-6 mt-4">
-        <div class="d-flex">
-          <p style="font-weight: bolder; font-size: 22px"><%= faq.question %></p>
-          <% if user_signed_in? %>
-            <%= link_to "", edit_faq_path(faq), class:"fas fa-edit ml-2 mt-2" %>
-            <h5 class="mb-5">/</h5>
-            <%= link_to '', faq_path(faq), method: :delete, data: { confirm: 'Are you sure you cant to delete this product ?'}, class:"fas fa-trash mt-2"  %>
-          <% end %>
+<div style="background-color: rgba(196, 196, 196, 0.15); min-height: 140vh">
+  <div class="container">
+    <h3 class="hide-on-small text-center py-5" style="font-size: 30px">FAQ</h3>
+    <h5 class="hide-on-large text-center py-5" style="">FAQ</h5>
+    <div class="row">
+      <% @faqs.each do |faq| %>
+        <div class="col-12 col-md-6 mt-4">
+          <div class="d-flex">
+            <p style="font-weight: bolder; font-size: 22px"><%= faq.question %></p>
+            <% if user_signed_in? %>
+              <%= link_to "", edit_faq_path(faq), class:"fas fa-edit ml-2 mt-2" %>
+              <h5 class="mb-5">/</h5>
+              <%= link_to '', faq_path(faq), method: :delete, data: { confirm: 'Are you sure you cant to delete this product ?'}, class:"fas fa-trash mt-2"  %>
+            <% end %>
+          </div>
+          <p><%= simple_format(faq.answer) %></p>
         </div>
-        <p><%= simple_format(faq.answer) %></p>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
