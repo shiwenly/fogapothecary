@@ -7,23 +7,19 @@
           <%= f.input :banner_pic, as: :file %>
           <%= f.input :title %>
           <%= f.input :description %>
-          <%#= f.input :title1 %>
           <%= f.input :description1 %>
-          <%= f.input :rounded_pic, as: :file, label: "Icone 1" %>
-          <%= f.input :separation_pic, as: :file, label: "Icone 2" %>
-          <%= f.input :square_pic, as: :file,  label: "Icone 3" %>
-          <%= f.input :title2, as: :file,  label: "Icone 4" %>
-          <%= f.input :benefit1,  label: "Icon1 text"  %>
-          <%= f.input :benefit2,  label: "Icon2 text"  %>
-          <%= f.input :benefit3,  label: "Icon3 text"  %>
-          <%= f.input :benefit4,  label: "Icon4 text"  %>
-          <%#= f.input :description2 %>
-          <%#= f.input :description3 %>
-          <%#= f.input :title3 %>
-          <%= f.input :product1, label: "Choose 1st productto display :", include_blank: false, collection: @products,label_method: :name, value_method: :id%>
-          <%= f.input :product2, label: "Choose 2nd product to display:", include_blank: false, collection: @products,label_method: :name, value_method: :id%>
-          <%= f.input :product3, label: "Choose 3rd product to display:", include_blank: false, collection: @products,label_method: :name, value_method: :id%>
-          <%= f.input :product4, label: "Choose 4th product to display:", include_blank: false, collection: @products,label_method: :name, value_method: :id%>
+          <%= f.input :icone1_pic, as: :file, label: "Icone 1" %>
+          <%= f.input :icone2_pic, as: :file, label: "Icone 2" %>
+          <%= f.input :icone3_pic, as: :file,  label: "Icone 3" %>
+          <%= f.input :icone4_pic, as: :file,  label: "Icone 4" %>
+          <%= f.input :icone1_text,  label: "Text for icone 1"  %>
+          <%= f.input :icone2_text,  label: "Text for icone 2"  %>
+          <%= f.input :icone3_text,  label: "Text for icone 3"  %>
+          <%= f.input :icone4_text,  label: "Text for icone 4"  %>
+          <%= f.input :product1, label: "Choose 1st most popular product", include_blank: false, collection: @products,label_method: :name, value_method: :id%>
+          <%= f.input :product2, label: "Choose 2nd most popular product", include_blank: false, collection: @products,label_method: :name, value_method: :id%>
+          <%= f.input :product3, label: "Choose 3rd most popular product", include_blank: false, collection: @products,label_method: :name, value_method: :id%>
+          <%= f.input :product4, label: "Choose 4th most popular product", include_blank: false, collection: @products,label_method: :name, value_method: :id%>
           <%= f.submit "Update", class: "btn btn btn-yellow-mustard mb-2" %>
         <% end %>
       </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_11_164640) do
+ActiveRecord::Schema.define(version: 2020_08_11_194301) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,17 +70,17 @@ ActiveRecord::Schema.define(version: 2020_08_11_164640) do
     t.string "banner_pic", default: "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png"
     t.string "title"
     t.text "description"
-    t.string "rounded_pic", default: "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png"
-    t.string "separation_pic", default: "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png"
+    t.string "icone2_pic", default: "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png"
+    t.string "icone1_pic", default: "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png"
     t.string "title1"
     t.text "description1"
-    t.string "square_pic", default: "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png"
-    t.string "title2"
+    t.string "icone3_pic", default: "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png"
+    t.string "icone4_pic"
     t.text "description2"
-    t.string "benefit1"
-    t.string "benefit2"
-    t.string "benefit3"
-    t.string "benefit4"
+    t.string "icone1_text"
+    t.string "icone2_text"
+    t.string "icone3_text"
+    t.string "icone4_text"
     t.string "title3"
     t.text "description3"
     t.bigint "user_id"

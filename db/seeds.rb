@@ -8,8 +8,8 @@ require "open-uri"
 #   Character.create(name: 'Luke', movie: movies.first)
 # Product.delete_all
 # Journal.delete_all
-Page.delete_all
-# Philosophy.delete_all
+# Page.delete_all
+Philosophy.delete_all
 # Stockist.delete_all
 
 # ==============PRODUCT SEED==================
@@ -453,43 +453,43 @@ Page.delete_all
 
 # ============== HOMEPAGE SEED ==================
 
-file1 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596460265/banner_small_s0f8jc.jpg')
-file2 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596459674/clean_company_vwc6f1.jpg')
-file3 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596460279/natural_ingredient_k2corx.jpg')
-file4 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596459675/spray_series_s0seu8.jpg')
-file5 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596459675/spray_series_s0seu8.jpg')
-page = Page.create!(
-  title: "A CLEAN COMPANY",
-  description: "
-  We believe it is our responsibility to prioritise ethical, sustainable practices in all areas of what we do. That means: ethically-sourced ingredients, safety, sustainability, transparency, peace of mind and a clean conscience. Not transporting water, testing on animals, harmful chemicals, palm oil, single-use plastics, fillers, chlorides, colourants and compromises.
-  ",
-  title1: "Natural Ingredients",
-  description1: "
-  Sugar surfactants and citric acids replace palm oil and chlorides, making Kinfill's concentrates 100 per cent biodegradable and safe for you and the planet.
-  ",
-  # title2: "SPRAY SERIES",
-  # description2: "
-  # Aromatherapy Mist designed for all-over use, selected from pure essential oils to transform your mood anywhere, anytime. Close your eyes and mouth and spray your Aromatherapy Mist from above your head. Inhale deeply and let it transform your mood and wellbeing with a Revitalising, Calming or Balancing scent.
+# file1 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596460265/banner_small_s0f8jc.jpg')
+# file2 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596459674/clean_company_vwc6f1.jpg')
+# file3 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596460279/natural_ingredient_k2corx.jpg')
+# file4 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596459675/spray_series_s0seu8.jpg')
+# file5 = URI.open('https://res.cloudinary.com/fogapothecary/image/upload/v1596459675/spray_series_s0seu8.jpg')
+# page = Page.create!(
+# title: "A CLEAN COMPANY",
+# description: "
+# We believe it is our responsibility to prioritise ethical, sustainable practices in all areas of what we do. That means: ethically-sourced ingredients, safety, sustainability, transparency, peace of mind and a clean conscience. Not transporting water, testing on animals, harmful chemicals, palm oil, single-use plastics, fillers, chlorides, colourants and compromises.
+# ",
+# title1: "Natural Ingredients",
+# description1: "
+# Sugar surfactants and citric acids replace palm oil and chlorides, making Kinfill's concentrates 100 per cent biodegradable and safe for you and the planet.
+# ",
+# title2: "SPRAY SERIES",
+# description2: "
+# Aromatherapy Mist designed for all-over use, selected from pure essential oils to transform your mood anywhere, anytime. Close your eyes and mouth and spray your Aromatherapy Mist from above your head. Inhale deeply and let it transform your mood and wellbeing with a Revitalising, Calming or Balancing scent.
 
-  # Prepare for a good night’s sleep by spraying Lavender Mist on your bed linen and pillow before you climb into bed. Prepare for a mood booster with Morning Mist as body perfume.
-  # ",
-  # title3: "Follow your bliss and the universe will open doors for you where there were only walls.",
-  # description3: "Joseph Campbell",
-  benefit1: "ANIMAL CRUELTY FREE",
-  benefit2: '100 BIODEGRADABLE',
-  benefit3: "VEGAN",
-  benefit4: "NEUTRAL",
-  product1: 24,
-  product2: 23,
-  product3: 22,
-  product4: 21,
-  user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
-)
-page.banner_pic.attach(io: file1, filename: 'file1', content_type: 'image/jpg')
-page.rounded_pic.attach(io: file2, filename: 'file2', content_type: 'image/jpg')
-page.separation_pic.attach(io: file3, filename: 'file3', content_type: 'image/jpg')
-page.square_pic.attach(io: file4, filename: 'file4', content_type: 'image/jpg')
-page.title2.attach(io: file5, filename: 'file5', content_type: 'image/jpg')
+# Prepare for a good night’s sleep by spraying Lavender Mist on your bed linen and pillow before you climb into bed. Prepare for a mood booster with Morning Mist as body perfume.
+# ",
+# title3: "Follow your bliss and the universe will open doors for you where there were only walls.",
+# description3: "Joseph Campbell",
+# benefit1: "ANIMAL CRUELTY FREE",
+# benefit2: '100 BIODEGRADABLE',
+# benefit3: "VEGAN",
+# benefit4: "NEUTRAL",
+# product1: 24,
+# product2: 23,
+# product3: 22,
+# product4: 21,
+# user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id
+# )
+# page.banner_pic.attach(io: file1, filename: 'file1', content_type: 'image/jpg')
+# page.rounded_pic.attach(io: file2, filename: 'file2', content_type: 'image/jpg')
+# page.icone1_pic.attach(io: file3, filename: 'file3', content_type: 'image/jpg')
+# page.square_pic.attach(io: file4, filename: 'file4', content_type: 'image/jpg')
+# page.title2.attach(io: file5, filename: 'file5', content_type: 'image/jpg')
 
 
 # ============== PHILOSOPHY PAGE SEED ==================
@@ -498,18 +498,18 @@ page.title2.attach(io: file5, filename: 'file5', content_type: 'image/jpg')
 # philosophy = Philosophy.create!(
 #   title: "Natural Ingredients",
 #   description: "
-#   Sugar surfactants and citric acids replace palm oil and chlorides, making Kinfill's concentrates 100 per cent biodegradable and safe for you and the planet.
-#   ",
+#     Sugar surfactants and citric acids replace palm oil and chlorides, making Kinfill's concentrates 100 per cent biodegradable and safe for you and the planet.
+#     ",
 #   description1: "
-#   At FOG, we believe it is our responsibility to prioritise ethical, sustainable practices in all areas of what we do. That means:
-#   Producing in The Netherlands, ethically-sourced ingredients, safety, sustainability, transparency, peace of mind and a clean conscience.
-#   Not transporting water, testing on animals, harmful chemicals, palm oil, single-use plastics, fillers, chlorides, colourants and compromises.
-#   ",
+#     At FOG, we believe it is our responsibility to prioritise ethical, sustainable practices in all areas of what we do. That means:
+#     Producing in The Netherlands, ethically-sourced ingredients, safety, sustainability, transparency, peace of mind and a clean conscience.
+#     Not transporting water, testing on animals, harmful chemicals, palm oil, single-use plastics, fillers, chlorides, colourants and compromises.
+#     ",
 #   description2: "
-#   At FOG, we believe it is our responsibility to prioritise ethical, sustainable practices in all areas of what we do. That means:
-#   Producing in The Netherlands, ethically-sourced ingredients, safety, sustainability, transparency, peace of mind and a clean conscience.
-#   Not transporting water, testing on animals, harmful chemicals, palm oil, single-use plastics, fillers, chlorides, colourants and compromises.
-#   ",
+#     At FOG, we believe it is our responsibility to prioritise ethical, sustainable practices in all areas of what we do. That means:
+#     Producing in The Netherlands, ethically-sourced ingredients, safety, sustainability, transparency, peace of mind and a clean conscience.
+#     Not transporting water, testing on animals, harmful chemicals, palm oil, single-use plastics, fillers, chlorides, colourants and compromises.
+#     ",
 #   description3: "Follow your bliss and the universe will open doors for you where there were only walls.",
 #   title1: "-Joseph Campbell",
 #   user_id: User.where("email = ? ", "fogapothecary@gmail.com")[0].id

@@ -1,39 +1,39 @@
 <div class="container-fluid my-5 py-5">
   <div class="row">
     <div class="col-6 col-md-2 offset-md-2">
-      <% if @page.separation_pic.attached? %>
-        <%= cl_image_tag(@page.separation_pic.key, class: "mb-4", style: "height:160px; object-position: center center; object-fit: cover; width: 100%") %>
-        <p class="text-center"><%= @page.benefit1 %></p>
+      <% if @page.icone1_pic.attached? %>
+        <%= cl_image_tag(@page.icone1_pic.key, class: "mb-4", style: "height:160px; object-position: center center; object-fit: cover; width: 100%") %>
+        <p class="text-center"><%= @page.icone1_text %></p>
       <% else %>
         <%= cl_image_tag(@default_pic, class: "mb-4", style: "height:160px; object-position: center center; object-fit: cover; width: 100%") %>
-        <p class="text-center"><%= @page.benefit1 %></p>
+        <p class="text-center"><%= @page.icone1_text %></p>
       <% end %>
     </div>
     <div class="col-6 col-md-2">
-      <% if @page.rounded_pic.attached? %>
-        <%= cl_image_tag(@page.rounded_pic.key, class: "mb-4", style: "height:160px; object-position: center center; object-fit: cover; width: 100%") %>
-        <p class="text-center"><%= @page.benefit2 %></p>
+      <% if @page.icone2_pic.attached? %>
+        <%= cl_image_tag(@page.icone2_pic.key, class: "mb-4", style: "height:160px; object-position: center center; object-fit: cover; width: 100%") %>
+        <p class="text-center"><%= @page.icone2_text %></p>
       <% else %>
         <%= cl_image_tag(@default_pic, class: "mb-4", style: "height:160px; object-position: center center; object-fit: cover; width: 100%") %>
-        <p class="text-center"><%= @page.benefit2 %></p>
+        <p class="text-center"><%= @page.icone2_text %></p>
       <% end %>
     </div>
     <div class="col-6 col-md-2">
-      <% if @page.square_pic.attached? %>
-        <%= cl_image_tag(@page.square_pic.key, class: "mb-4", style: "height:160px; object-position: center center; object-fit: cover; width: 100%") %>
-        <p class="text-center"><%= @page.benefit3 %></p>
+      <% if @page.icone3_pic.attached? %>
+        <%= cl_image_tag(@page.icone3_pic.key, class: "mb-4", style: "height:160px; object-position: center center; object-fit: cover; width: 100%") %>
+        <p class="text-center"><%= @page.icone3_text %></p>
       <% else %>
         <%= cl_image_tag(@default_pic, class: "mb-4", style: "height:160px; object-position: center center; object-fit: cover; width: 100%") %>
-        <p class="text-center"><%= @page.benefit3 %></p>
+        <p class="text-center"><%= @page.icone3_text %></p>
       <% end %>
     </div>
     <div class="col-6 col-md-2">
-      <% if @page.title2.attached? %>
-        <%= cl_image_tag(@page.title2.key, class: "mb-4", style: "height:160px; object-position: center center; object-fit: cover; width: 100%") %>
-        <p class="text-center"><%= @page.benefit4 %></p>
+      <% if @page.icone4_pic.attached? %>
+        <%= cl_image_tag(@page.icone4_pic.key, class: "mb-4", style: "height:160px; object-position: center center; object-fit: cover; width: 100%") %>
+        <p class="text-center"><%= @page.icone4_text %></p>
       <% else %>
         <%= cl_image_tag(@default_pic, class: "mb-4", style: "height:160px; object-position: center center; object-fit: cover; width: 100%") %>
-        <p class="text-center"><%= @page.benefit4 %></p>
+        <p class="text-center"><%= @page.icone4_text %></p>
       <% end %>
     </div>
   </div>
