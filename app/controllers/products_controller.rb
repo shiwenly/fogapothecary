@@ -7,6 +7,8 @@ class ProductsController < ApplicationController
     @product_spray = Product.where("category_product = ? AND statut = ?", "Spray", "active" ).order(created_at: :asc)
     @product_mist = Product.where("category_product = ?  AND statut = ?", "Mist", "active").order(created_at: :asc)
     @product_candle = Product.where("category_product = ?  AND statut = ?", "Candle", "active").order(created_at: :asc)
+    @product_balm = Product.where("category_product = ?  AND statut = ?", "Balm", "active").order(created_at: :asc)
+    @product_essential_oil = Product.where("category_product = ?  AND statut = ?", "Essential Oil", "active").order(created_at: :asc)
     @product_banner = Product.where("statut = ?", "banner_product")[0]
     @default_pic = "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png"
   end

@@ -5,7 +5,7 @@
       <div class="center">
         <%= simple_form_for [@product] do |f| %>
           <%= f.input :name, label: "Title" %>
-          <%= f.input :category_product, collection: %w(Mist Spray Cream) %>
+          <%= f.input :category_product, collection: ["Mist", "Spray", "Cream", "Balm", "Essential Oil"] %>
           <%= f.input :title %>
           <%= f.input :description %>
           <%= f.input :title1 %>
