@@ -1,6 +1,6 @@
 class FaqsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
-  before_action :set_journal, only: [:edit, :update, :destroy]
+  before_action :set_faq, only: [:edit, :update, :destroy]
 
   def index
     @faqs = Faq.where("statut = ?", "active" ).order(created_at: :asc)
