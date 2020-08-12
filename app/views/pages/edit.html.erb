@@ -16,10 +16,6 @@
           <%= f.input :icone2_text,  label: "Text for icone 2"  %>
           <%= f.input :icone3_text,  label: "Text for icone 3"  %>
           <%= f.input :icone4_text,  label: "Text for icone 4"  %>
-          <%= f.input :product1, label: "Choose 1st most popular product", include_blank: false, collection: @products,label_method: :name, value_method: :id%>
-          <%= f.input :product2, label: "Choose 2nd most popular product", include_blank: false, collection: @products,label_method: :name, value_method: :id%>
-          <%= f.input :product3, label: "Choose 3rd most popular product", include_blank: false, collection: @products,label_method: :name, value_method: :id%>
-          <%= f.input :product4, label: "Choose 4th most popular product", include_blank: false, collection: @products,label_method: :name, value_method: :id%>
           <%= f.submit "Update", class: "btn btn btn-yellow-mustard mb-2" %>
         <% end %>
       </div>
