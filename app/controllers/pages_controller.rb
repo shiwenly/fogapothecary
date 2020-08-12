@@ -4,8 +4,7 @@ class PagesController < ApplicationController
   def home
     @page = Page.last
     @default_pic = "https://res.cloudinary.com/fogapothecary/image/upload/v1596465097/default_annonce_wxhhsp.png"
-    @products = Product.all.order(created_at: :asc)
-    @nb = @products.count
+    @products = Product.where("statut = ?", "active" ).order(created_at: :asc)
   end
 
   def new
