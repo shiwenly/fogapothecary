@@ -14,13 +14,7 @@
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
-// import JQuery from 'jquery';
-// window.$ = window.JQuery = JQuery;
-
-// Carousel
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel';
+// import { tns } from "./node_modules/tiny-slider/src/tiny-slider.js"
 
 console.log('Hello World from Webpacker')
 
@@ -40,3 +34,5 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 });
+
+

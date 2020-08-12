@@ -43,17 +43,11 @@ class PagesController < ApplicationController
       :title1,
       :description1,
       :description2,
-      :title3,
-      :description3,
       :icone1_text,
       :icone2_text,
       :icone3_text,
       :icone4_text,
       :user_id,
-      :product1,
-      :product2,
-      :product3,
-      :product4,
     )
   end
 

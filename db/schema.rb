@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_11_194301) do
+ActiveRecord::Schema.define(version: 2020_08_12_180340) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,15 +81,9 @@ ActiveRecord::Schema.define(version: 2020_08_11_194301) do
     t.string "icone2_text"
     t.string "icone3_text"
     t.string "icone4_text"
-    t.string "title3"
-    t.text "description3"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "product1"
-    t.integer "product2"
-    t.integer "product3"
-    t.integer "product4"
     t.index ["user_id"], name: "index_pages_on_user_id"
   end
 
