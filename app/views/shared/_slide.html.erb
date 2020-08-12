@@ -59,11 +59,11 @@
   var slider = tns({
     container: '.slide-wrapper-laptop',
     mouseDrag: true,
-    slideBy: "page",
     swipeAngle: false,
     speed: 400,
     gutter: 10,
     autoplay: true,
+    autoplayTimeout: 3500,
     controls: false,
     nav: false,
     responsive: {
@@ -83,11 +83,11 @@
   var slider = tns({
     container: '.slide-wrapper-mobile',
     mouseDrag: true,
-    slideBy: "page",
     swipeAngle: false,
     speed: 400,
     gutter: 10,
-    autoplay: false,
+    autoplay: true,
+    autoplayTimeout: 3500,
     controls: false,
     nav: false,
     responsive: {
