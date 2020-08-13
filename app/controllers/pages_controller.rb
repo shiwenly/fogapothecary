@@ -46,7 +46,6 @@ class PagesController < ApplicationController
       :icone2_text,
       :icone3_text,
       :icone4_text,
-      :user_id,
     )
   end
 

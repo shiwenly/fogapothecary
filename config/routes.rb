@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :pages, only: [:edit]
 
   resources :products, only: [:show, :new, :create, :index, :edit, :destroy,:update ]
+  get '/products_in', to: "products#index_in", as: :products_in
   resources :journals, only: [:show, :new, :create, :index, :edit, :destroy,:update ]
   resources :philosophies, only: [:index, :edit, :update ]
   resources :stockists, only: [:new, :create, :index, :edit, :destroy,:update ]

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_12_180340) do
+ActiveRecord::Schema.define(version: 2020_08_13_080752) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -118,6 +118,14 @@ ActiveRecord::Schema.define(version: 2020_08_12_180340) do
     t.text "price"
     t.string "toko_link"
     t.string "shopee_link"
+    t.string "name_in"
+    t.string "title_in"
+    t.text "description_in"
+    t.string "title1_in"
+    t.text "description1_in"
+    t.string "title2_in"
+    t.text "description2_in"
+    t.text "price_in"
     t.index ["user_id"], name: "index_products_on_user_id"
   end
 

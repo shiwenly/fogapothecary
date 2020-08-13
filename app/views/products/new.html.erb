@@ -4,18 +4,27 @@
     <div class="col-12 col-md-6 col-lg-6">
       <div class="center">
         <%= simple_form_for [@product] do |f| %>
-          <%= f.input :name, label: "Title" %>
+          <%= f.input :name, label: "Name of product" %>
           <%= f.input :category_product, collection: ["Mist", "Spray", "Cream", "Balm", "Essential Oil"] %>
-          <%= f.input :title %>
-          <%= f.input :description %>
-          <%= f.input :title1 %>
-          <%= f.input :description1 %>
-          <%= f.input :title2 %>
-          <%= f.input :description2 %>
+          <%= f.input :title, label: "Title 1st paragraph" %>
+          <%= f.input :description, label: "Description 1st paragraph" %>
+          <%= f.input :title1, label: "Title 2nd paragraph" %>
+          <%= f.input :description1, label: "Description 2nd paragraph" %>
+          <%= f.input :title2, label: "Title 3rd paragraph" %>
+          <%= f.input :description2, label: "Description 3rd paragraph" %>
           <%= f.input :price %>
           <%= f.input :toko_link, label: "Link to Tokopedia" %>
           <%= f.input :shopee_link, label: "Link to Shopee" %>
           <%= f.input :picture1, as: :file %>
+          <h5 class="mt-5 mb-4">Add translation in Bahasa below</h5>
+          <%= f.input :name_in, label: "Name of product in bahasa" %>
+          <%= f.input :title_in, label: "Title 1st paragraph in bahasa" %>
+          <%= f.input :description_in, label: "Description 1st paragraph in bahasa" %>
+          <%= f.input :title1_in, label: "Title 2nd paragraph in bahasa" %>
+          <%= f.input :description1_in, label: "Description 2nd paragraph in bahasa" %>
+          <%= f.input :title2_in, label: "Title 3rd paragraph in bahasa" %>
+          <%= f.input :description2_in, label: "Description 3rd paragraph in bahasa" %>
+          <%= f.input :price_in, label: "Price detail in bahasa" %>
           <%= f.submit "Create", class: "btn btn btn-yellow-mustard mb-2" %>
         <% end %>
       </div>

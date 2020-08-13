@@ -4,10 +4,10 @@
     <div class="col-12 col-md-6 col-lg-6">
       <div class="center">
         <%= simple_form_for [@page] do |f| %>
-          <%= f.input :banner_pic, as: :file %>
-          <%= f.input :title %>
-          <%= f.input :description %>
-          <%= f.input :description1 %>
+          <%= f.input :banner_pic, as: :file, label: "Banner picture" %>
+          <%= f.input :title, label: "Title banner" %>
+          <%= f.input :description, label: "Description Banner" %>
+          <%= f.input :description1, label: "Text below banner" %>
           <%= f.input :icone1_pic, as: :file, label: "Icone 1" %>
           <%= f.input :icone2_pic, as: :file, label: "Icone 2" %>
           <%= f.input :icone3_pic, as: :file,  label: "Icone 3" %>

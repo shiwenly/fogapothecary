@@ -4,13 +4,13 @@
     <div class="col-12 col-md-6 col-lg-6">
       <div class="center">
         <%= simple_form_for [@philosophy] do |f| %>
-          <%= f.input :picture1, as: :file %>
-          <%= f.input :title %>
-          <%= f.input :description %>
-          <%= f.input :description1 %>
-          <%= f.input :description2 %>
-          <%= f.input :description3 %>
-          <%= f.input :title1 %>
+          <%= f.input :picture1, as: :file, label: "Banner picture" %>
+          <%= f.input :title, label: "Title below banner" %>
+          <%= f.input :description, label: "Description below banner" %>
+          <%= f.input :description1, label: "Text on the left" %>
+          <%= f.input :description2, label: "Text on the right" %>
+          <%= f.input :description3, label: "Quote" %>
+          <%= f.input :title1, label: "Author of quote" %>
           <%= f.submit "Update", class: "btn btn btn-yellow-mustard mb-2" %>
         <% end %>
       </div>
